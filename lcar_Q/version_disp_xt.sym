@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="version_disp_xt">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2015-2-11T2:17:13</timestamp>
+    <attr value="version_disp_xt" name="VeriModel" />
+    <pin polarity="Input" x="0" y="-176" name="frame_alt" />
+    <pin polarity="Input" x="0" y="-128" name="c_done" />
+    <pin polarity="Input" x="0" y="-80" name="clk" />
+    <pin polarity="Input" x="0" y="-32" name="dsw_im_download_on" />
+    <pin polarity="Input" x="0" y="16" name="im_download_exe_tim" />
+    <pin polarity="Input" x="0" y="-224" name="ver(7:0)" />
+    <pin polarity="Output" x="384" y="-80" name="ver_disp" />
+    <pin polarity="Output" x="384" y="-128" name="ex_disp" />
+    <pin polarity="Output" x="384" y="-224" name="ld1_on" />
+    <pin polarity="Output" x="384" y="-176" name="ld2_on" />
+    <pin polarity="Input" x="0" y="64" name="im_err_det" />
+    <pin polarity="Input" x="0" y="112" name="dipsw2_on" />
+    <graph>
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="192" y="-264" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-176" type="pin frame_alt" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-128" type="pin c_done" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-80" type="pin clk" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin dsw_im_download_on" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="16" type="pin im_download_exe_tim" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-224" type="pin ver(7:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-80" type="pin ver_disp" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-128" type="pin ex_disp" />
+        <line x2="0" y1="-32" y2="-32" x1="64" />
+        <line x2="0" y1="16" y2="16" x1="64" />
+        <rect width="64" x="0" y="-236" height="24" />
+        <line x2="0" y1="-224" y2="-224" x1="64" />
+        <line x2="0" y1="-176" y2="-176" x1="64" />
+        <line x2="0" y1="-128" y2="-128" x1="64" />
+        <line x2="0" y1="-80" y2="-80" x1="64" />
+        <line x2="384" y1="-128" y2="-128" x1="320" />
+        <line x2="384" y1="-80" y2="-80" x1="320" />
+        <rect width="256" x="64" y="-256" height="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-224" type="pin ld1_on" />
+        <line x2="384" y1="-224" y2="-224" x1="320" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-176" type="pin ld2_on" />
+        <line x2="384" y1="-176" y2="-176" x1="320" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="64" type="pin im_err_det" />
+        <line x2="0" y1="64" y2="64" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="112" type="pin dipsw2_on" />
+        <line x2="0" y1="112" y2="112" x1="64" />
+    </graph>
+</symbol>

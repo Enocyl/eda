@@ -1,0 +1,461 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : output_rcv_lcar_m5353Q_14b43Hz.vf
+// /___/   /\     Timestamp : 12/09/2021 14:15:16
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: D:\software\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family aspartan6 -verilog ../output_rcv_lcar_m5353Q_14b43Hz.vf -w ../output_rcv_lcar_m5353Q_14b43Hz.sch
+//Design Name: output_rcv_lcar_m5353Q_14b43Hz
+//Device: aspartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module OFD_HXILINX_output_rcv_lcar_m5353Q_14b43Hz(Q, C, D);
+   
+   output             Q;
+
+   input 	      C;	
+   input              D;
+   
+   parameter INIT = 1'b0;
+   (* IOB = "TRUE" *)
+
+   reg                Q = INIT;
+
+   always @(posedge C)
+     begin
+          Q <= D;
+     end
+   
+   
+endmodule
+`timescale 1ns / 1ps
+
+module gclkgen_lcar_m5353Q_14b43Hz_MUSER_output_rcv_lcar_m5353Q_14b43Hz(BLANK, 
+                                                                        CLK25M, 
+                                                                        CLK31M, 
+                                                                        C_DONE, 
+                                                                        
+      M4_SET_DONE, 
+                                                                        OVP, 
+                                                                        
+      CLK125M_SS, 
+                                                                        GCLK, 
+                                                                        
+      GCLKOUT_START, 
+                                                                        XGCLK, 
+                                                                        
+      XGCLK60_DCM_RST);
+
+    input BLANK;
+    input CLK25M;
+    input CLK31M;
+    input C_DONE;
+    input M4_SET_DONE;
+    input OVP;
+   output CLK125M_SS;
+   output GCLK;
+   output GCLKOUT_START;
+   output XGCLK;
+   output XGCLK60_DCM_RST;
+   
+   wire CLK125M_SSCG;
+   wire [2:1] DCM_SS_ST;
+   wire [7:0] DCM60_ST;
+   wire F50HZ;
+   wire XLXN_151;
+   wire XLXN_155;
+   wire XLXN_159;
+   wire XLXN_162;
+   wire XLXN_354;
+   wire XLXN_355;
+   wire XLXN_362;
+   wire XLXN_367;
+   wire XLXN_368;
+   wire XGCLK60_DCM_RST_DUMMY;
+   wire CLK125M_SS_DUMMY;
+   wire XGCLK_DUMMY;
+   
+   assign CLK125M_SS = CLK125M_SS_DUMMY;
+   assign XGCLK = XGCLK_DUMMY;
+   assign XGCLK60_DCM_RST = XGCLK60_DCM_RST_DUMMY;
+   DCM_CLKGEN #( .SPREAD_SPECTRUM("CENTER_HIGH_SPREAD"), .CLKIN_PERIOD(32.0), 
+         .CLKFX_MULTIPLY(8), .CLKFX_MD_MAX(4.000), .CLKFX_DIVIDE(2), 
+         .CLKFXDV_DIVIDE(2), .STARTUP_WAIT("FALSE") ) DCM_CLK125M_SS 
+         (.CLKIN(CLK31M), 
+                              .FREEZEDCM(XLXN_354), 
+                              .PROGCLK(XLXN_354), 
+                              .PROGDATA(XLXN_354), 
+                              .PROGEN(XLXN_354), 
+                              .RST(XLXN_355), 
+                              .CLKFX(CLK125M_SSCG), 
+                              .CLKFXDV(), 
+                              .CLKFX180(), 
+                              .LOCKED(XLXN_367), 
+                              .PROGDONE(), 
+                              .STATUS(DCM_SS_ST[2:1]));
+   DCM_SP #( .CLKIN_PERIOD(8.0), .CLK_FEEDBACK("NONE"), .CLKFX_MULTIPLY(4), 
+         .CLKFX_DIVIDE(10), .DESKEW_ADJUST("SYSTEM_SYNCHRONOUS"), 
+         .CLKDV_DIVIDE(2.0), .CLKIN_DIVIDE_BY_2("FALSE"), 
+         .CLKOUT_PHASE_SHIFT("NONE"), .DFS_FREQUENCY_MODE("LOW"), 
+         .DLL_FREQUENCY_MODE("LOW"), .DSS_MODE("NONE"), 
+         .DUTY_CYCLE_CORRECTION("TRUE"), .PHASE_SHIFT(0), 
+         .STARTUP_WAIT("FALSE"), .FACTORY_JF(16'hC080) ) DCM_SP_XGCLK60 
+         (.CLKFB(XLXN_162), 
+                          .CLKIN(CLK125M_SS_DUMMY), 
+                          .DSSEN(XLXN_162), 
+                          .PSCLK(XLXN_162), 
+                          .PSEN(XLXN_162), 
+                          .PSINCDEC(XLXN_162), 
+                          .RST(XLXN_151), 
+                          .CLKDV(), 
+                          .CLKFX(XGCLK_DUMMY), 
+                          .CLKFX180(), 
+                          .CLK0(), 
+                          .CLK2X(), 
+                          .CLK2X180(), 
+                          .CLK90(), 
+                          .CLK180(), 
+                          .CLK270(), 
+                          .LOCKED(XLXN_159), 
+                          .PSDONE(), 
+                          .STATUS(DCM60_ST[7:0]));
+   gclkout_lcar_m5353Q_14b43Hz  gclkout_0 (.blank(BLANK), 
+                                          .clk(CLK25M), 
+                                          .c_done(C_DONE), 
+                                          .f50hz(F50HZ), 
+                                          .m4_set_done(M4_SET_DONE), 
+                                          .ovp(OVP), 
+                                          .xgclk(XGCLK_DUMMY), 
+                                          .gclk(GCLK), 
+                                          .gclkout_start(GCLKOUT_START));
+   GND  XLXI_85 (.G(XLXN_162));
+   OR2B1  XLXI_86 (.I0(C_DONE), 
+                  .I1(XGCLK60_DCM_RST_DUMMY), 
+                  .O(XLXN_151));
+   dcm_rst_mpc  XLXI_87 (.clk(CLK25M), 
+                        .clkin_stop(DCM60_ST[2]), 
+                        .c_done(C_DONE), 
+                        .f59hz(XLXN_155), 
+                        .locked(XLXN_159), 
+                        .ovp(OVP), 
+                        .dcm_rst(XGCLK60_DCM_RST_DUMMY));
+   GND  XLXI_88 (.G(XLXN_155));
+   GND  XLXI_169 (.G(XLXN_354));
+   OR2B1  XLXI_170 (.I0(C_DONE), 
+                   .I1(XLXN_368), 
+                   .O(XLXN_355));
+   dcm_rst_mpc  XLXI_171 (.clk(CLK25M), 
+                         .clkin_stop(DCM_SS_ST[2]), 
+                         .c_done(C_DONE), 
+                         .f59hz(XLXN_362), 
+                         .locked(XLXN_367), 
+                         .ovp(OVP), 
+                         .dcm_rst(XLXN_368));
+   GND  XLXI_172 (.G(XLXN_362));
+   BUFG  XLXI_175 (.I(CLK125M_SSCG), 
+                  .O(CLK125M_SS_DUMMY));
+endmodule
+`timescale 1ns / 1ps
+
+module ofd3_MUSER_output_rcv_lcar_m5353Q_14b43Hz(CK, 
+                                                 D0, 
+                                                 D1, 
+                                                 D2, 
+                                                 Q0, 
+                                                 Q1, 
+                                                 Q2);
+
+    input CK;
+    input D0;
+    input D1;
+    input D2;
+   output Q0;
+   output Q1;
+   output Q2;
+   
+   
+   (* HU_SET = "XLXI_1_0" *) 
+   OFD_HXILINX_output_rcv_lcar_m5353Q_14b43Hz #( .INIT(1'b0) ) XLXI_1 (.C(CK), 
+                                                      .D(D0), 
+                                                      .Q(Q0));
+   (* HU_SET = "XLXI_2_1" *) 
+   OFD_HXILINX_output_rcv_lcar_m5353Q_14b43Hz #( .INIT(1'b0) ) XLXI_2 (.C(CK), 
+                                                      .D(D1), 
+                                                      .Q(Q1));
+   (* HU_SET = "XLXI_3_2" *) 
+   OFD_HXILINX_output_rcv_lcar_m5353Q_14b43Hz #( .INIT(1'b0) ) XLXI_3 (.C(CK), 
+                                                      .D(D2), 
+                                                      .Q(Q2));
+endmodule
+`timescale 1ns / 1ps
+
+module ofd1s_MUSER_output_rcv_lcar_m5353Q_14b43Hz(CK, 
+                                                  D, 
+                                                  Q);
+
+    input CK;
+    input D;
+   output Q;
+   
+   
+   (* HU_SET = "XLXI_1_3" *) 
+   OFD_HXILINX_output_rcv_lcar_m5353Q_14b43Hz #( .INIT(1'b0) ) XLXI_1 (.C(CK), 
+                                                      .D(D), 
+                                                      .Q(Q));
+endmodule
+`timescale 1ns / 1ps
+
+module ofd4s_MUSER_output_rcv_lcar_m5353Q_14b43Hz(CK, 
+                                                  D0, 
+                                                  D1, 
+                                                  D2, 
+                                                  D3, 
+                                                  Q0, 
+                                                  Q1, 
+                                                  Q2, 
+                                                  Q3);
+
+    input CK;
+    input D0;
+    input D1;
+    input D2;
+    input D3;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   
+   
+   (* HU_SET = "XLXI_1_4" *) 
+   OFD_HXILINX_output_rcv_lcar_m5353Q_14b43Hz #( .INIT(1'b0) ) XLXI_1 (.C(CK), 
+                                                      .D(D0), 
+                                                      .Q(Q0));
+   (* HU_SET = "XLXI_2_5" *) 
+   OFD_HXILINX_output_rcv_lcar_m5353Q_14b43Hz #( .INIT(1'b0) ) XLXI_2 (.C(CK), 
+                                                      .D(D1), 
+                                                      .Q(Q1));
+   (* HU_SET = "XLXI_3_6" *) 
+   OFD_HXILINX_output_rcv_lcar_m5353Q_14b43Hz #( .INIT(1'b0) ) XLXI_3 (.C(CK), 
+                                                      .D(D2), 
+                                                      .Q(Q2));
+   (* HU_SET = "XLXI_4_7" *) 
+   OFD_HXILINX_output_rcv_lcar_m5353Q_14b43Hz #( .INIT(1'b0) ) XLXI_4 (.C(CK), 
+                                                      .D(D3), 
+                                                      .Q(Q3));
+endmodule
+`timescale 1ns / 1ps
+
+module ofd2_MUSER_output_rcv_lcar_m5353Q_14b43Hz(CK, 
+                                                 D0, 
+                                                 D1, 
+                                                 Q0, 
+                                                 Q1);
+
+    input CK;
+    input D0;
+    input D1;
+   output Q0;
+   output Q1;
+   
+   
+   (* HU_SET = "XLXI_1_8" *) 
+   OFD_HXILINX_output_rcv_lcar_m5353Q_14b43Hz #( .INIT(1'b0) ) XLXI_1 (.C(CK), 
+                                                      .D(D0), 
+                                                      .Q(Q0));
+   (* HU_SET = "XLXI_2_9" *) 
+   OFD_HXILINX_output_rcv_lcar_m5353Q_14b43Hz #( .INIT(1'b0) ) XLXI_2 (.C(CK), 
+                                                      .D(D1), 
+                                                      .Q(Q1));
+endmodule
+`timescale 1ns / 1ps
+
+module output_rcv_lcar_m5353Q_14b43Hz(ADDCLK, 
+                                      ADDSDA, 
+                                      CLK, 
+                                      CLK31M, 
+                                      CLK125M, 
+                                      C_DONE, 
+                                      FM_CYCLE_STP, 
+                                      FM_RD_D, 
+                                      FRAME_ALT, 
+                                      FRAME_ALT_FRZ, 
+                                      FR_RATE, 
+                                      F50HZ, 
+                                      M4_SET_DONE, 
+                                      OCLK, 
+                                      RGB_OUT_ZERO, 
+                                      CLK125M_SS, 
+                                      CN2_D, 
+                                      FM_OV_RD_ADRS, 
+                                      FM_OV_RD_CYCLE, 
+                                      XGCLK60_DCM_RST);
+
+    input ADDCLK;
+    input ADDSDA;
+    input CLK;
+    input CLK31M;
+    input CLK125M;
+    input C_DONE;
+    input FM_CYCLE_STP;
+    input [31:0] FM_RD_D;
+    input FRAME_ALT;
+    input FRAME_ALT_FRZ;
+    input [15:0] FR_RATE;
+    input F50HZ;
+    input M4_SET_DONE;
+    input OCLK;
+    input [2:0] RGB_OUT_ZERO;
+   output CLK125M_SS;
+   output [27:0] CN2_D;
+   output [18:0] FM_OV_RD_ADRS;
+   output FM_OV_RD_CYCLE;
+   output XGCLK60_DCM_RST;
+   
+   wire DCLK;
+   wire GCLK;
+   wire GCLKOUT_START;
+   wire LE;
+   wire [15:0] R_OUT;
+   wire [3:0] SCAN_LINE;
+   wire XGCLK;
+   wire XLXN_6;
+   wire XLXN_10;
+   
+   data_out_lcar_m5353Q_14b43Hz  data_out_0 (.blank(XLXN_10), 
+                                            .clk(CLK125M), 
+                                            .fm_cycle_stp(FM_CYCLE_STP), 
+                                            .fm_rd_d(FM_RD_D[31:0]), 
+                                            .frame_alt(FRAME_ALT), 
+                                            .frame_alt_frz(FRAME_ALT_FRZ), 
+                                            .gclkout_start(GCLKOUT_START), 
+                                            .oclk(OCLK), 
+                                            .rgb_out_zero(RGB_OUT_ZERO[2:0]), 
+                                            .b_out(), 
+                                            .b_we(), 
+                                            .dclk_out(DCLK), 
+                                            
+         .fm_ov_rd_adrs(FM_OV_RD_ADRS[18:0]), 
+                                            .fm_ov_rd_cycle(FM_OV_RD_CYCLE), 
+                                            .g_out(), 
+                                            .g_we(), 
+                                            .le_out(LE), 
+                                            .r_out(R_OUT[15:0]), 
+                                            .r_we(), 
+                                            .scan_line(SCAN_LINE[3:0]));
+   gclkgen_lcar_m5353Q_14b43Hz_MUSER_output_rcv_lcar_m5353Q_14b43Hz  gclkgen_0 
+         (.BLANK(XLXN_10), 
+                                                                               
+         .CLK25M(CLK), 
+                                                                               
+         .CLK31M(CLK31M), 
+                                                                               
+         .C_DONE(C_DONE), 
+                                                                               
+         .M4_SET_DONE(M4_SET_DONE), 
+                                                                               
+         .OVP(XLXN_6), 
+                                                                               
+         .CLK125M_SS(CLK125M_SS), 
+                                                                               
+         .GCLK(GCLK), 
+                                                                               
+         .GCLKOUT_START(GCLKOUT_START), 
+                                                                               
+         .XGCLK(XGCLK), 
+                                                                               
+         .XGCLK60_DCM_RST(XGCLK60_DCM_RST));
+   out_tim_lcar_m5353Q_14b43Hz  out_tim_0 (.clk(CLK), 
+                                          .frame_alt(FRAME_ALT), 
+                                          .fr_rate(FR_RATE[15:0]), 
+                                          .f50hz(F50HZ), 
+                                          .blanka(XLXN_10), 
+                                          .ovt(), 
+                                          .ov_stp(XLXN_6));
+   ofd3_MUSER_output_rcv_lcar_m5353Q_14b43Hz  XLXI_3 (.CK(OCLK), 
+                                                     .D0(R_OUT[3]), 
+                                                     .D1(R_OUT[4]), 
+                                                     .D2(R_OUT[5]), 
+                                                     .Q0(CN2_D[6]), 
+                                                     .Q1(CN2_D[7]), 
+                                                     .Q2(CN2_D[8]));
+   ofd3_MUSER_output_rcv_lcar_m5353Q_14b43Hz  XLXI_5 (.CK(OCLK), 
+                                                     .D0(R_OUT[6]), 
+                                                     .D1(R_OUT[7]), 
+                                                     .D2(R_OUT[8]), 
+                                                     .Q0(CN2_D[12]), 
+                                                     .Q1(CN2_D[13]), 
+                                                     .Q2(CN2_D[14]));
+   ofd1s_MUSER_output_rcv_lcar_m5353Q_14b43Hz  XLXI_8 (.CK(OCLK), 
+                                                      .D(DCLK), 
+                                                      .Q(CN2_D[3]));
+   ofd3_MUSER_output_rcv_lcar_m5353Q_14b43Hz  XLXI_16 (.CK(OCLK), 
+                                                      .D0(R_OUT[0]), 
+                                                      .D1(R_OUT[1]), 
+                                                      .D2(R_OUT[2]), 
+                                                      .Q0(CN2_D[0]), 
+                                                      .Q1(CN2_D[1]), 
+                                                      .Q2(CN2_D[2]));
+   ofd1s_MUSER_output_rcv_lcar_m5353Q_14b43Hz  XLXI_23 (.CK(OCLK), 
+                                                       .D(DCLK), 
+                                                       .Q(CN2_D[9]));
+   ofd1s_MUSER_output_rcv_lcar_m5353Q_14b43Hz  XLXI_62 (.CK(OCLK), 
+                                                       .D(DCLK), 
+                                                       .Q(CN2_D[15]));
+   ofd1s_MUSER_output_rcv_lcar_m5353Q_14b43Hz  XLXI_85 (.CK(OCLK), 
+                                                       .D(LE), 
+                                                       .Q(CN2_D[10]));
+   ofd1s_MUSER_output_rcv_lcar_m5353Q_14b43Hz  XLXI_101 (.CK(OCLK), 
+                                                        .D(LE), 
+                                                        .Q(CN2_D[4]));
+   ofd1s_MUSER_output_rcv_lcar_m5353Q_14b43Hz  XLXI_111 (.CK(OCLK), 
+                                                        .D(LE), 
+                                                        .Q(CN2_D[16]));
+   ofd2_MUSER_output_rcv_lcar_m5353Q_14b43Hz  XLXI_113 (.CK(CLK), 
+                                                       .D0(ADDCLK), 
+                                                       .D1(ADDSDA), 
+                                                       .Q0(), 
+                                                       .Q1());
+   ofd3_MUSER_output_rcv_lcar_m5353Q_14b43Hz  XLXI_137 (.CK(XGCLK), 
+                                                       .D0(GCLK), 
+                                                       .D1(GCLK), 
+                                                       .D2(GCLK), 
+                                                       .Q0(CN2_D[22]), 
+                                                       .Q1(CN2_D[23]), 
+                                                       .Q2(CN2_D[24]));
+   ofd1s_MUSER_output_rcv_lcar_m5353Q_14b43Hz  XLXI_165 (.CK(XGCLK), 
+                                                        .D(GCLK), 
+                                                        .Q(CN2_D[5]));
+   ofd1s_MUSER_output_rcv_lcar_m5353Q_14b43Hz  XLXI_168 (.CK(XGCLK), 
+                                                        .D(GCLK), 
+                                                        .Q(CN2_D[11]));
+   ofd1s_MUSER_output_rcv_lcar_m5353Q_14b43Hz  XLXI_172 (.CK(XGCLK), 
+                                                        .D(GCLK), 
+                                                        .Q(CN2_D[17]));
+   ofd4s_MUSER_output_rcv_lcar_m5353Q_14b43Hz  XLXI_246 (.CK(OCLK), 
+                                                        .D0(SCAN_LINE[0]), 
+                                                        .D1(SCAN_LINE[1]), 
+                                                        .D2(SCAN_LINE[2]), 
+                                                        .D3(SCAN_LINE[3]), 
+                                                        .Q0(CN2_D[18]), 
+                                                        .Q1(CN2_D[19]), 
+                                                        .Q2(CN2_D[20]), 
+                                                        .Q3(CN2_D[21]));
+   ofd3_MUSER_output_rcv_lcar_m5353Q_14b43Hz  XLXI_306 (.CK(XGCLK), 
+                                                       .D0(GCLK), 
+                                                       .D1(GCLK), 
+                                                       .D2(GCLK), 
+                                                       .Q0(CN2_D[25]), 
+                                                       .Q1(CN2_D[26]), 
+                                                       .Q2(CN2_D[27]));
+endmodule

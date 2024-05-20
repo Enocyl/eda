@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="gamma_ctemp_mpc">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2010-5-17T1:54:22</timestamp>
+    <pin polarity="Input" x="0" y="-224" name="DIN(9:0)" />
+    <pin polarity="Input" x="0" y="-128" name="CT_GAIN(3:0)" />
+    <pin polarity="Input" x="0" y="-176" name="GAMMA(2:0)" />
+    <pin polarity="Output" x="416" y="-224" name="DOUT(15:0)" />
+    <pin polarity="Input" x="0" y="-32" name="CLK" />
+    <pin polarity="Input" x="0" y="-80" name="OVP" />
+    <graph>
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="208" y="-264" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-224" type="pin DIN(9:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-128" type="pin CT_GAIN(3:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-176" type="pin GAMMA(2:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="344" y="-224" type="pin DOUT(15:0)" />
+        <rect width="64" x="352" y="-236" height="24" />
+        <line x2="416" y1="-224" y2="-224" x1="352" />
+        <rect width="64" x="0" y="-236" height="24" />
+        <line x2="0" y1="-224" y2="-224" x1="64" />
+        <rect width="64" x="0" y="-188" height="24" />
+        <line x2="0" y1="-176" y2="-176" x1="64" />
+        <rect width="64" x="0" y="-140" height="24" />
+        <line x2="0" y1="-128" y2="-128" x1="64" />
+        <rect width="288" x="64" y="-256" height="256" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin CLK" />
+        <line x2="0" y1="-32" y2="-32" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-80" type="pin OVP" />
+        <line x2="0" y1="-80" y2="-80" x1="64" />
+    </graph>
+</symbol>

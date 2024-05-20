@@ -1,0 +1,38 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : dsw_read.vf
+// /___/   /\     Timestamp : 12/09/2021 14:15:03
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: D:\software\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family aspartan6 -verilog ../dsw_read.vf -w ../dsw_read.sch
+//Design Name: dsw_read
+//Device: aspartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module dsw_read(CLK, 
+                C_DONE, 
+                C_DONE_DLY, 
+                DSW_TP);
+
+    input CLK;
+    input C_DONE;
+   output C_DONE_DLY;
+   output DSW_TP;
+   
+   
+   dsw_rd  dsw_rd_0 (.clk(CLK), 
+                    .c_done(C_DONE), 
+                    .c_done_dly(C_DONE_DLY), 
+                    .dsw_tp(DSW_TP));
+endmodule

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="brightness_mpc_b">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2017-4-19T2:59:40</timestamp>
+    <attr value="brightness_mpc_b" name="VeriModel" />
+    <pin polarity="Input" x="0" y="-128" name="ovp" />
+    <pin polarity="Input" x="0" y="-80" name="clk" />
+    <pin polarity="Input" x="0" y="-224" name="din(15:0)" />
+    <pin polarity="Input" x="0" y="-176" name="brightness(6:0)" />
+    <pin polarity="Output" x="384" y="-224" name="dout(15:0)" />
+    <graph>
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="192" y="-264" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-128" type="pin ovp" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-80" type="pin clk" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-224" type="pin din(15:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-176" type="pin brightness(6:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-224" type="pin dout(15:0)" />
+        <rect width="256" x="64" y="-256" height="208" />
+        <rect width="64" x="320" y="-236" height="24" />
+        <line x2="384" y1="-224" y2="-224" x1="320" />
+        <line x2="0" y1="-128" y2="-128" x1="64" />
+        <rect width="64" x="0" y="-236" height="24" />
+        <line x2="0" y1="-224" y2="-224" x1="64" />
+        <rect width="64" x="0" y="-188" height="24" />
+        <line x2="0" y1="-176" y2="-176" x1="64" />
+        <line x2="0" y1="-80" y2="-80" x1="64" />
+    </graph>
+</symbol>

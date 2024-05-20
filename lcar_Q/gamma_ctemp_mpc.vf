@@ -1,0 +1,164 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : gamma_ctemp_mpc.vf
+// /___/   /\     Timestamp : 12/09/2021 14:15:07
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: D:\software\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family aspartan6 -verilog ../gamma_ctemp_mpc.vf -w ../gamma_ctemp_mpc.sch
+//Design Name: gamma_ctemp_mpc
+//Device: aspartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FD16CE_HXILINX_gamma_ctemp_mpc(Q, C, CE, CLR, D);
+
+   
+   output [15:0]      Q;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   input  [15:0]      D;
+   
+   reg    [15:0]      Q;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 16'b0000_0000_0000_0000;
+	else if (CE)
+          Q <= D;
+     end
+   
+   
+endmodule
+`timescale 100 ps / 10 ps
+
+module FD4CE_HXILINX_gamma_ctemp_mpc(Q0, Q1, Q2, Q3, C, CE, CLR, D0, D1, D2, D3);
+   
+   output             Q0;
+   output             Q1;
+   output             Q2;
+   output             Q3;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   input              D0;
+   input              D1;
+   input              D2;
+   input              D3;
+   
+   reg                Q0;
+   reg                Q1;
+   reg                Q2;
+   reg                Q3;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  {Q3, Q2, Q1, Q0} <= 4'b0000;
+	else if (CE)
+          {Q3, Q2, Q1, Q0} <= {D3, D2, D1, D0};
+     end
+   
+   
+endmodule
+`timescale 1ns / 1ps
+
+module fd4e_MUSER_gamma_ctemp_mpc(CE, 
+                                  CK, 
+                                  D, 
+                                  Q);
+
+    input CE;
+    input CK;
+    input [3:0] D;
+   output [3:0] Q;
+   
+   wire XLXN_3;
+   
+   (* HU_SET = "XLXI_1_0" *) 
+   FD4CE_HXILINX_gamma_ctemp_mpc  XLXI_1 (.C(CK), 
+                                         .CE(CE), 
+                                         .CLR(XLXN_3), 
+                                         .D0(D[0]), 
+                                         .D1(D[1]), 
+                                         .D2(D[2]), 
+                                         .D3(D[3]), 
+                                         .Q0(Q[0]), 
+                                         .Q1(Q[1]), 
+                                         .Q2(Q[2]), 
+                                         .Q3(Q[3]));
+   GND  XLXI_7 (.G(XLXN_3));
+endmodule
+`timescale 1ns / 1ps
+
+module f1d16_MUSER_gamma_ctemp_mpc(CK, 
+                                   D, 
+                                   Q);
+
+    input CK;
+    input [15:0] D;
+   output [15:0] Q;
+   
+   wire XLXN_16;
+   wire XLXN_19;
+   
+   (* HU_SET = "XLXI_11_1" *) 
+   FD16CE_HXILINX_gamma_ctemp_mpc  XLXI_11 (.C(CK), 
+                                           .CE(XLXN_19), 
+                                           .CLR(XLXN_16), 
+                                           .D(D[15:0]), 
+                                           .Q(Q[15:0]));
+   GND  XLXI_12 (.G(XLXN_16));
+   VCC  XLXI_13 (.P(XLXN_19));
+endmodule
+`timescale 1ns / 1ps
+
+module gamma_ctemp_mpc(CLK, 
+                       CT_GAIN, 
+                       DIN, 
+                       GAMMA, 
+                       OVP, 
+                       DOUT);
+
+    input CLK;
+    input [3:0] CT_GAIN;
+    input [9:0] DIN;
+    input [2:0] GAMMA;
+    input OVP;
+   output [15:0] DOUT;
+   
+   wire [3:0] GAIN;
+   wire [15:0] XLXN_61;
+   wire [15:0] XLXN_64;
+   wire XLXN_74;
+   
+   gamma28_rom_mpc  XLXI_8 (.addra(DIN[9:0]), 
+                           .clka(CLK), 
+                           .ena(XLXN_74), 
+                           .douta(XLXN_61[15:0]));
+   VCC  XLXI_11 (.P(XLXN_74));
+   f1d16_MUSER_gamma_ctemp_mpc  XLXI_21 (.CK(CLK), 
+                                        .D(XLXN_61[15:0]), 
+                                        .Q(XLXN_64[15:0]));
+   ctemp_multi_mpc  XLXI_22 (.clk(CLK), 
+                            .din(XLXN_64[15:0]), 
+                            .gain(GAIN[3:0]), 
+                            .dout(DOUT[15:0]));
+   fd4e_MUSER_gamma_ctemp_mpc  XLXI_52 (.CE(OVP), 
+                                       .CK(CLK), 
+                                       .D(CT_GAIN[3:0]), 
+                                       .Q(GAIN[3:0]));
+endmodule

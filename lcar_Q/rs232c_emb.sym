@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="rs232c_emb">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2013-4-23T1:44:38</timestamp>
+    <pin polarity="Input" x="0" y="-160" name="CLK" />
+    <pin polarity="Input" x="0" y="-208" name="STARTN" />
+    <pin polarity="Input" x="0" y="-832" name="EMB_TX_REQ" />
+    <pin polarity="Input" x="0" y="-784" name="EMB_TX_DATA(79:0)" />
+    <pin polarity="Input" x="0" y="-304" name="FRAME_ALT" />
+    <pin polarity="Input" x="0" y="-928" name="RXD" />
+    <pin polarity="Input" x="0" y="-256" name="STARTN_DLY" />
+    <pin polarity="Output" x="576" y="-256" name="EMB_BAUD_RATE(1:0)" />
+    <pin polarity="Output" x="576" y="-64" name="CMD_RX_REQ" />
+    <pin polarity="Output" x="576" y="-16" name="CMD_TX_REQ" />
+    <pin polarity="Output" x="576" y="-880" name="POWER1(15:0)" />
+    <pin polarity="Output" x="576" y="-832" name="POWER2(15:0)" />
+    <pin polarity="Output" x="576" y="-784" name="POWER3(15:0)" />
+    <pin polarity="Output" x="576" y="-736" name="POWER4(15:0)" />
+    <pin polarity="Output" x="576" y="-688" name="POWER5(15:0)" />
+    <pin polarity="Output" x="576" y="-640" name="POWER6(15:0)" />
+    <pin polarity="Output" x="576" y="-592" name="POWER7(15:0)" />
+    <pin polarity="Output" x="576" y="-544" name="POWER8(15:0)" />
+    <pin polarity="Output" x="576" y="-496" name="POWER9(15:0)" />
+    <pin polarity="Output" x="576" y="-448" name="TEMPERATURE1(15:0)" />
+    <pin polarity="Output" x="576" y="-400" name="TEMPERATURE2(15:0)" />
+    <pin polarity="Output" x="576" y="-208" name="EMB_RSP_REQ" />
+    <pin polarity="Output" x="576" y="-160" name="EMB_RSP_DATA(79:0)" />
+    <pin polarity="Output" x="576" y="-352" name="HUMIDITY1(15:0)" />
+    <pin polarity="Output" x="576" y="-304" name="HUMIDITY2(15:0)" />
+    <pin polarity="Output" x="576" y="-112" name="RXD_O" />
+    <pin polarity="Output" x="576" y="-928" name="TXD" />
+    <pin polarity="Output" x="576" y="32" name="EMB_TP_OUT(7:0)" />
+    <pin polarity="Input" x="0" y="-688" name="SDI_FAN_ON" />
+    <graph>
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="288" y="-964" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-160" type="pin CLK" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-208" type="pin STARTN" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-832" type="pin EMB_TX_REQ" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-784" type="pin EMB_TX_DATA(79:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-304" type="pin FRAME_ALT" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-928" type="pin RXD" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-256" type="pin STARTN_DLY" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="504" y="-256" type="pin EMB_BAUD_RATE(1:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="504" y="-64" type="pin CMD_RX_REQ" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="504" y="-16" type="pin CMD_TX_REQ" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="504" y="-880" type="pin POWER1(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="504" y="-832" type="pin POWER2(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="504" y="-784" type="pin POWER3(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="504" y="-736" type="pin POWER4(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="504" y="-688" type="pin POWER5(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="504" y="-640" type="pin POWER6(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="504" y="-592" type="pin POWER7(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="504" y="-544" type="pin POWER8(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="504" y="-496" type="pin POWER9(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="504" y="-448" type="pin TEMPERATURE1(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="504" y="-400" type="pin TEMPERATURE2(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="504" y="-208" type="pin EMB_RSP_REQ" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="504" y="-160" type="pin EMB_RSP_DATA(79:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="504" y="-352" type="pin HUMIDITY1(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="504" y="-304" type="pin HUMIDITY2(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="504" y="-112" type="pin RXD_O" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="504" y="-928" type="pin TXD" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="504" y="32" type="pin EMB_TP_OUT(7:0)" />
+        <rect width="64" x="512" y="20" height="24" />
+        <line x2="576" y1="32" y2="32" x1="512" />
+        <line x2="0" y1="-928" y2="-928" x1="64" />
+        <line x2="0" y1="-832" y2="-832" x1="64" />
+        <rect width="64" x="0" y="-796" height="24" />
+        <line x2="0" y1="-784" y2="-784" x1="64" />
+        <line x2="0" y1="-160" y2="-160" x1="64" />
+        <line x2="0" y1="-208" y2="-208" x1="64" />
+        <line x2="576" y1="-928" y2="-928" x1="512" />
+        <rect width="64" x="512" y="-892" height="24" />
+        <line x2="576" y1="-880" y2="-880" x1="512" />
+        <rect width="64" x="512" y="-844" height="24" />
+        <line x2="576" y1="-832" y2="-832" x1="512" />
+        <rect width="64" x="512" y="-796" height="24" />
+        <line x2="576" y1="-784" y2="-784" x1="512" />
+        <rect width="64" x="512" y="-748" height="24" />
+        <line x2="576" y1="-736" y2="-736" x1="512" />
+        <rect width="64" x="512" y="-700" height="24" />
+        <line x2="576" y1="-688" y2="-688" x1="512" />
+        <rect width="64" x="512" y="-652" height="24" />
+        <line x2="576" y1="-640" y2="-640" x1="512" />
+        <rect width="64" x="512" y="-604" height="24" />
+        <line x2="576" y1="-592" y2="-592" x1="512" />
+        <rect width="64" x="512" y="-556" height="24" />
+        <line x2="576" y1="-544" y2="-544" x1="512" />
+        <rect width="64" x="512" y="-508" height="24" />
+        <line x2="576" y1="-496" y2="-496" x1="512" />
+        <rect width="64" x="512" y="-460" height="24" />
+        <line x2="576" y1="-448" y2="-448" x1="512" />
+        <rect width="64" x="512" y="-412" height="24" />
+        <line x2="576" y1="-400" y2="-400" x1="512" />
+        <rect width="64" x="512" y="-268" height="24" />
+        <line x2="576" y1="-256" y2="-256" x1="512" />
+        <line x2="576" y1="-208" y2="-208" x1="512" />
+        <rect width="64" x="512" y="-172" height="24" />
+        <line x2="576" y1="-160" y2="-160" x1="512" />
+        <rect width="64" x="512" y="-364" height="24" />
+        <line x2="576" y1="-352" y2="-352" x1="512" />
+        <rect width="64" x="512" y="-316" height="24" />
+        <line x2="576" y1="-304" y2="-304" x1="512" />
+        <line x2="0" y1="-304" y2="-304" x1="64" />
+        <line x2="0" y1="-256" y2="-256" x1="64" />
+        <line x2="576" y1="-112" y2="-112" x1="512" />
+        <line x2="576" y1="-16" y2="-16" x1="512" />
+        <line x2="576" y1="-64" y2="-64" x1="512" />
+        <rect width="448" x="64" y="-960" height="1024" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-688" type="pin SDI_FAN_ON" />
+        <line x2="0" y1="-688" y2="-688" x1="64" />
+    </graph>
+</symbol>

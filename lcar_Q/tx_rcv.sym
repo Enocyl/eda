@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="tx_rcv">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2021-11-25T8:47:58</timestamp>
+    <pin polarity="Input" x="0" y="-912" name="PA_LINK_ON" />
+    <pin polarity="Input" x="0" y="-48" name="FRAME_ALT" />
+    <pin polarity="Input" x="0" y="0" name="C_DONE" />
+    <pin polarity="Input" x="0" y="48" name="CLK25M" />
+    <pin polarity="Input" x="0" y="240" name="EMB_TX_DATA(79:0)" />
+    <pin polarity="Input" x="0" y="144" name="EMB_RXD" />
+    <pin polarity="Input" x="0" y="192" name="EMB_TX_REQ" />
+    <pin polarity="Input" x="0" y="336" name="RX_FAN_ON" />
+    <pin polarity="Input" x="0" y="384" name="STARTN_DLY" />
+    <pin polarity="Input" x="0" y="432" name="CLK72M" />
+    <pin polarity="Input" x="0" y="576" name="PA_DST_MAC(47:0)" />
+    <pin polarity="Input" x="0" y="624" name="PA_DST_PORT(15:0)" />
+    <pin polarity="Input" x="0" y="672" name="PA_DST_IP(31:0)" />
+    <pin polarity="Input" x="0" y="720" name="PA_SRC_MAC(47:0)" />
+    <pin polarity="Input" x="0" y="768" name="PA_SRC_PORT(15:0)" />
+    <pin polarity="Input" x="0" y="816" name="PA_SRC_IP(31:0)" />
+    <pin polarity="Input" x="0" y="-864" name="PA_RX_OK" />
+    <pin polarity="Input" x="0" y="864" name="TX_CLK" />
+    <pin polarity="Input" x="0" y="960" name="tcm_e" />
+    <pin polarity="Input" x="0" y="1008" name="tcm_v" />
+    <pin polarity="Input" x="0" y="1056" name="tcm_wd(7:0)" />
+    <pin polarity="BiDirectional" x="512" y="-96" name="SENS_SDA" />
+    <pin polarity="Output" x="512" y="-1008" name="PA_TXD(3:0)" />
+    <pin polarity="Output" x="512" y="-960" name="PA_TX_EN" />
+    <pin polarity="Output" x="512" y="48" name="SENS_SCL_TP" />
+    <pin polarity="Output" x="512" y="-48" name="SENS_SCL" />
+    <pin polarity="Output" x="512" y="0" name="SENS_SDA_TP" />
+    <pin polarity="Output" x="512" y="288" name="EMB_RSP_DATA(79:0)" />
+    <pin polarity="Output" x="512" y="192" name="EMB_RSP_REQ" />
+    <pin polarity="Output" x="512" y="144" name="EMB_TXD" />
+    <pin polarity="Output" x="512" y="480" name="RH_CSUM_OK_P" />
+    <pin polarity="Output" x="512" y="528" name="TMP_CSUM_OK_P" />
+    <pin polarity="Input" x="0" y="1104" name="SS_NE" />
+    <graph>
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="256" y="-1096" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-912" type="pin PA_LINK_ON" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-48" type="pin FRAME_ALT" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="0" type="pin C_DONE" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="48" type="pin CLK25M" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="240" type="pin EMB_TX_DATA(79:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="144" type="pin EMB_RXD" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="192" type="pin EMB_TX_REQ" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="336" type="pin RX_FAN_ON" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="384" type="pin STARTN_DLY" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="432" type="pin CLK72M" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="576" type="pin PA_DST_MAC(47:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="624" type="pin PA_DST_PORT(15:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="672" type="pin PA_DST_IP(31:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="720" type="pin PA_SRC_MAC(47:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="768" type="pin PA_SRC_PORT(15:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="816" type="pin PA_SRC_IP(31:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-864" type="pin PA_RX_OK" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="864" type="pin TX_CLK" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="960" type="pin tcm_e" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="1008" type="pin tcm_v" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="1056" type="pin tcm_wd(7:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-96" type="pin SENS_SDA" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-1008" type="pin PA_TXD(3:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-960" type="pin PA_TX_EN" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="48" type="pin SENS_SCL_TP" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-48" type="pin SENS_SCL" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="0" type="pin SENS_SDA_TP" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="288" type="pin EMB_RSP_DATA(79:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="192" type="pin EMB_RSP_REQ" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="144" type="pin EMB_TXD" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="480" type="pin RH_CSUM_OK_P" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="528" type="pin TMP_CSUM_OK_P" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="1104" type="pin SS_NE" />
+        <line x2="0" y1="1104" y2="1104" x1="64" />
+        <line x2="0" y1="960" y2="960" x1="64" />
+        <line x2="0" y1="1008" y2="1008" x1="64" />
+        <rect width="64" x="0" y="1044" height="24" />
+        <line x2="0" y1="1056" y2="1056" x1="64" />
+        <line x2="0" y1="864" y2="864" x1="64" />
+        <rect width="64" x="0" y="708" height="24" />
+        <line x2="0" y1="720" y2="720" x1="64" />
+        <rect width="64" x="0" y="756" height="24" />
+        <line x2="0" y1="768" y2="768" x1="64" />
+        <rect width="64" x="0" y="804" height="24" />
+        <line x2="0" y1="816" y2="816" x1="64" />
+        <rect width="64" x="0" y="564" height="24" />
+        <line x2="0" y1="576" y2="576" x1="64" />
+        <rect width="64" x="0" y="612" height="24" />
+        <line x2="0" y1="624" y2="624" x1="64" />
+        <rect width="64" x="0" y="660" height="24" />
+        <line x2="0" y1="672" y2="672" x1="64" />
+        <line x2="512" y1="480" y2="480" x1="448" />
+        <line x2="512" y1="528" y2="528" x1="448" />
+        <line x2="0" y1="144" y2="144" x1="64" />
+        <line x2="0" y1="192" y2="192" x1="64" />
+        <line x2="0" y1="-912" y2="-912" x1="64" />
+        <line x2="0" y1="-864" y2="-864" x1="64" />
+        <line x2="0" y1="48" y2="48" x1="64" />
+        <line x2="0" y1="0" y2="0" x1="64" />
+        <line x2="0" y1="-48" y2="-48" x1="64" />
+        <line x2="0" y1="432" y2="432" x1="64" />
+        <line x2="0" y1="384" y2="384" x1="64" />
+        <line x2="0" y1="336" y2="336" x1="64" />
+        <rect width="64" x="0" y="228" height="24" />
+        <line x2="0" y1="240" y2="240" x1="64" />
+        <rect width="64" x="448" y="-1020" height="24" />
+        <line x2="512" y1="-1008" y2="-1008" x1="448" />
+        <line x2="512" y1="-960" y2="-960" x1="448" />
+        <line x2="512" y1="-96" y2="-96" x1="448" />
+        <line x2="512" y1="-48" y2="-48" x1="448" />
+        <line x2="512" y1="0" y2="0" x1="448" />
+        <line x2="512" y1="48" y2="48" x1="448" />
+        <line x2="512" y1="144" y2="144" x1="448" />
+        <line x2="512" y1="192" y2="192" x1="448" />
+        <rect width="64" x="448" y="276" height="24" />
+        <line x2="512" y1="288" y2="288" x1="448" />
+        <rect width="384" x="64" y="-1088" height="2224" />
+    </graph>
+</symbol>

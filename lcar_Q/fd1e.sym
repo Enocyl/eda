@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="fd1e">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2010-5-9T2:6:53</timestamp>
+    <pin polarity="Input" x="0" y="-64" name="CE" />
+    <pin polarity="Input" x="0" y="-16" name="CK" />
+    <pin polarity="Input" x="0" y="-112" name="D" />
+    <pin polarity="Output" x="208" y="-112" name="Q" />
+    <graph>
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="104" y="-128" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-64" type="pin CE" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-16" type="pin CK" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-112" type="pin D" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="136" y="-112" type="pin Q" />
+        <rect width="80" x="64" y="-128" height="128" />
+        <line x2="0" y1="-16" y2="-16" x1="64" />
+        <line x2="0" y1="-64" y2="-64" x1="64" />
+        <line x2="0" y1="-112" y2="-112" x1="64" />
+        <line x2="208" y1="-112" y2="-112" x1="144" />
+    </graph>
+</symbol>

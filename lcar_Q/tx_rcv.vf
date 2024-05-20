@@ -1,0 +1,483 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : tx_rcv.vf
+// /___/   /\     Timestamp : 12/09/2021 14:15:24
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: D:\software\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family aspartan6 -verilog ../tx_rcv.vf -w ../tx_rcv.sch
+//Design Name: tx_rcv
+//Device: aspartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module fd1_MUSER_tx_rcv(CK, 
+                        D, 
+                        Q);
+
+    input CK;
+    input D;
+   output Q;
+   
+   
+   FD #( .INIT(1'b0) ) XLXI_1 (.C(CK), 
+              .D(D), 
+              .Q(Q));
+endmodule
+`timescale 1ns / 1ps
+
+module rs232c_emb_MUSER_tx_rcv(CLK, 
+                               EMB_TX_DATA, 
+                               EMB_TX_REQ, 
+                               FRAME_ALT, 
+                               RXD, 
+                               SDI_FAN_ON, 
+                               STARTN, 
+                               STARTN_DLY, 
+                               CMD_RX_REQ, 
+                               CMD_TX_REQ, 
+                               EMB_BAUD_RATE, 
+                               EMB_RSP_DATA, 
+                               EMB_RSP_REQ, 
+                               EMB_TP_OUT, 
+                               HUMIDITY1, 
+                               HUMIDITY2, 
+                               POWER1, 
+                               POWER2, 
+                               POWER3, 
+                               POWER4, 
+                               POWER5, 
+                               POWER6, 
+                               POWER7, 
+                               POWER8, 
+                               POWER9, 
+                               RXD_O, 
+                               TEMPERATURE1, 
+                               TEMPERATURE2, 
+                               TXD);
+
+    input CLK;
+    input [79:0] EMB_TX_DATA;
+    input EMB_TX_REQ;
+    input FRAME_ALT;
+    input RXD;
+    input SDI_FAN_ON;
+    input STARTN;
+    input STARTN_DLY;
+   output CMD_RX_REQ;
+   output CMD_TX_REQ;
+   output [1:0] EMB_BAUD_RATE;
+   output [79:0] EMB_RSP_DATA;
+   output EMB_RSP_REQ;
+   output [7:0] EMB_TP_OUT;
+   output [15:0] HUMIDITY1;
+   output [15:0] HUMIDITY2;
+   output [15:0] POWER1;
+   output [15:0] POWER2;
+   output [15:0] POWER3;
+   output [15:0] POWER4;
+   output [15:0] POWER5;
+   output [15:0] POWER6;
+   output [15:0] POWER7;
+   output [15:0] POWER8;
+   output [15:0] POWER9;
+   output RXD_O;
+   output [15:0] TEMPERATURE1;
+   output [15:0] TEMPERATURE2;
+   output TXD;
+   
+   wire H;
+   wire L;
+   wire RST;
+   wire TX_TIMEOUT;
+   wire [7:0] XLXN_12;
+   wire XLXN_80;
+   wire [7:0] XLXN_81;
+   wire XLXN_82;
+   wire XLXN_83;
+   wire XLXN_85;
+   wire XLXN_98;
+   wire XLXN_99;
+   wire XLXN_100;
+   wire XLXN_138;
+   wire [79:0] XLXN_142;
+   wire [79:0] XLXN_144;
+   wire XLXN_154;
+   wire XLXN_159;
+   wire RXD_O_DUMMY;
+   wire CMD_RX_REQ_DUMMY;
+   wire CMD_TX_REQ_DUMMY;
+   wire [1:0] EMB_BAUD_RATE_DUMMY;
+   
+   assign CMD_RX_REQ = CMD_RX_REQ_DUMMY;
+   assign CMD_TX_REQ = CMD_TX_REQ_DUMMY;
+   assign EMB_BAUD_RATE[1:0] = EMB_BAUD_RATE_DUMMY[1:0];
+   assign RXD_O = RXD_O_DUMMY;
+   VCC  XLXI_5 (.P(H));
+   GND  XLXI_6 (.G(L));
+   fd1_MUSER_tx_rcv  XLXI_7 (.CK(CLK), 
+                            .D(STARTN), 
+                            .Q(XLXN_138));
+   uart_if_emb  XLXI_14 (.clk(CLK), 
+                        .cmd_tx_req(CMD_TX_REQ_DUMMY), 
+                        .rst(RST), 
+                        .rx_data(XLXN_81[7:0]), 
+                        .rx_frm_err(XLXN_82), 
+                        .rx_prty_err(XLXN_83), 
+                        .rx_time_out_on(H), 
+                        .rx_vld(XLXN_80), 
+                        .tx_busy(XLXN_99), 
+                        .tx_cmd_data(XLXN_142[79:0]), 
+                        .tx_done(XLXN_100), 
+                        .cmd_rx_req(CMD_RX_REQ_DUMMY), 
+                        .cmd_tx_done(), 
+                        .rcv_ok(XLXN_85), 
+                        .rx_cmd_data(XLXN_144[79:0]), 
+                        .rx_time_out(), 
+                        .tx_brk(), 
+                        .tx_data(XLXN_12[7:0]), 
+                        .tx_vld(XLXN_98));
+   (* IOSTANDARD = "DEFAULT" *) (* IBUF_DELAY_VALUE = "0" *) (* 
+         IFD_DELAY_VALUE = "AUTO" *) 
+   IBUF  XLXI_15 (.I(RXD), 
+                 .O(RXD_O_DUMMY));
+   OR2  XLXI_16 (.I0(XLXN_154), 
+                .I1(STARTN_DLY), 
+                .O(XLXN_159));
+   (* IOSTANDARD = "DEFAULT" *) (* SLEW = "SLOW" *) (* DRIVE = "12" *) 
+   OBUF  XLXI_18 (.I(XLXN_159), 
+                 .O(TXD));
+   uart_core_mpc_a  XLXI_19 (.brdsel(EMB_BAUD_RATE_DUMMY[1:0]), 
+                            .clk(CLK), 
+                            .prtysel({L, L}), 
+                            .rst(RST), 
+                            .rxd(RXD_O_DUMMY), 
+                            .stpsel(L), 
+                            .tx_brk(L), 
+                            .tx_data(XLXN_12[7:0]), 
+                            .tx_vld(XLXN_98), 
+                            .rx_brk(), 
+                            .rx_data(XLXN_81[7:0]), 
+                            .rx_frm_err(XLXN_82), 
+                            .rx_prty_err(XLXN_83), 
+                            .rx_vld(XLXN_80), 
+                            .txd(XLXN_154), 
+                            .tx_busy(XLXN_99), 
+                            .tx_done(XLXN_100));
+   OR3  XLXI_21 (.I0(TX_TIMEOUT), 
+                .I1(XLXN_138), 
+                .I2(STARTN), 
+                .O(RST));
+   cmd_if_emb_xt_a  XLXI_22 (.clk(CLK), 
+                            .cmd_rx_req(CMD_RX_REQ_DUMMY), 
+                            .ext_cmd_data(EMB_TX_DATA[79:0]), 
+                            .ext_cmd_tx_req(EMB_TX_REQ), 
+                            .fan_set_ena(L), 
+                            .frame_alt(FRAME_ALT), 
+                            .humid_ena({L, L}), 
+                            .pwr_ena({H, H, H, H, H, H, H, H, H}), 
+                            .rcv_ok(XLXN_85), 
+                            .rst(RST), 
+                            .rx_cmd_data(XLXN_144[79:0]), 
+                            .rx_timeout_set({L, L, L, L, H, H, H}), 
+                            .sdi_fan_cmd_ena(L), 
+                            .sdi_fan_on(SDI_FAN_ON), 
+                            .sensor_port_sel({L, L}), 
+                            .temp_ena({L, H}), 
+                            .cmd_tx_req(CMD_TX_REQ_DUMMY), 
+                            .emb_baud_rate(EMB_BAUD_RATE_DUMMY[1:0]), 
+                            .humidity1(HUMIDITY1[15:0]), 
+                            .humidity2(HUMIDITY2[15:0]), 
+                            .power1(POWER1[15:0]), 
+                            .power2(POWER2[15:0]), 
+                            .power3(POWER3[15:0]), 
+                            .power4(POWER4[15:0]), 
+                            .power5(POWER5[15:0]), 
+                            .power6(POWER6[15:0]), 
+                            .power7(POWER7[15:0]), 
+                            .power8(POWER8[15:0]), 
+                            .power9(POWER9[15:0]), 
+                            .rsp_data(EMB_RSP_DATA[79:0]), 
+                            .rsp_rx_req(EMB_RSP_REQ), 
+                            .sens_num(), 
+                            .temperature1(TEMPERATURE1[15:0]), 
+                            .temperature2(TEMPERATURE2[15:0]), 
+                            .tp_out(EMB_TP_OUT[7:0]), 
+                            .tx_cmd_data(XLXN_142[79:0]), 
+                            .tx_timeout(TX_TIMEOUT));
+endmodule
+`timescale 1ns / 1ps
+
+module tx_process_MUSER_tx_rcv(CLK25M, 
+                               DST_IP, 
+                               DST_MAC, 
+                               DST_PORT, 
+                               frame_alt, 
+                               HUMID1, 
+                               HUMID2, 
+                               LINK_ON, 
+                               POWER1, 
+                               POWER2, 
+                               RX_OK, 
+                               SRC_IP, 
+                               SRC_MAC, 
+                               SRC_PORT, 
+                               SS_NE, 
+                               tcm_e, 
+                               tcm_v, 
+                               tcm_wd, 
+                               TEMP1, 
+                               TEMP2, 
+                               TX_CLK, 
+                               TXD, 
+                               TX_EN);
+
+    input CLK25M;
+    input [31:0] DST_IP;
+    input [47:0] DST_MAC;
+    input [15:0] DST_PORT;
+    input frame_alt;
+    input [15:0] HUMID1;
+    input [15:0] HUMID2;
+    input LINK_ON;
+    input [15:0] POWER1;
+    input [15:0] POWER2;
+    input RX_OK;
+    input [31:0] SRC_IP;
+    input [47:0] SRC_MAC;
+    input [15:0] SRC_PORT;
+    input SS_NE;
+    input tcm_e;
+    input tcm_v;
+    input [7:0] tcm_wd;
+    input [15:0] TEMP1;
+    input [15:0] TEMP2;
+    input TX_CLK;
+   output [3:0] TXD;
+   output TX_EN;
+   
+   wire L;
+   wire [8:0] tcm_ra;
+   wire [7:0] txd_in;
+   wire txen_in;
+   wire tx_done;
+   
+   rtn_mux_lcar_ru  rtn_mux_0 (.clk25M(CLK25M), 
+                              .frame_alt(frame_alt), 
+                              .humid1(HUMID1[15:0]), 
+                              .humid2(HUMID2[15:0]), 
+                              .link_on(LINK_ON), 
+                              .power1(POWER1[15:0]), 
+                              .power2(POWER2[15:0]), 
+                              .rx_ok(RX_OK), 
+                              .ss_ne(SS_NE), 
+                              .tcm_e(tcm_e), 
+                              .tcm_ra(tcm_ra[8:0]), 
+                              .tcm_v(tcm_v), 
+                              .tcm_wd(tcm_wd[7:0]), 
+                              .temp1(TEMP1[15:0]), 
+                              .temp2(TEMP2[15:0]), 
+                              .tx_clk(TX_CLK), 
+                              .tx_done(tx_done), 
+                              .dout(txd_in[7:0]), 
+                              .tx_en(txen_in), 
+                              .tx_on());
+   tx_mii_udp  tx_mii_udp_0 (.clk(TX_CLK), 
+                            .c_done(LINK_ON), 
+                            .dst_ip(DST_IP[31:0]), 
+                            .dst_mac(DST_MAC[47:0]), 
+                            .dst_port(DST_PORT[15:0]), 
+                            .src_ip(SRC_IP[31:0]), 
+                            .src_mac(SRC_MAC[47:0]), 
+                            .src_port(SRC_PORT[15:0]), 
+                            .txd_in(txd_in[7:0]), 
+                            .txen_in(txen_in), 
+                            .mii_txd(TXD[3:0]), 
+                            .mii_txen(TX_EN), 
+                            .tcm_ra(tcm_ra[8:0]), 
+                            .tx_done(tx_done));
+   GND  XLXI_80 (.G(L));
+endmodule
+`timescale 1ns / 1ps
+
+module tx_rcv(CLK25M, 
+              CLK72M, 
+              C_DONE, 
+              EMB_RXD, 
+              EMB_TX_DATA, 
+              EMB_TX_REQ, 
+              FRAME_ALT, 
+              PA_DST_IP, 
+              PA_DST_MAC, 
+              PA_DST_PORT, 
+              PA_LINK_ON, 
+              PA_RX_OK, 
+              PA_SRC_IP, 
+              PA_SRC_MAC, 
+              PA_SRC_PORT, 
+              RX_FAN_ON, 
+              SS_NE, 
+              STARTN_DLY, 
+              tcm_e, 
+              tcm_v, 
+              tcm_wd, 
+              TX_CLK, 
+              EMB_RSP_DATA, 
+              EMB_RSP_REQ, 
+              EMB_TXD, 
+              PA_TXD, 
+              PA_TX_EN, 
+              RH_CSUM_OK_P, 
+              SENS_SCL, 
+              SENS_SCL_TP, 
+              SENS_SDA_TP, 
+              TMP_CSUM_OK_P, 
+              SENS_SDA);
+
+    input CLK25M;
+    input CLK72M;
+    input C_DONE;
+    input EMB_RXD;
+    input [79:0] EMB_TX_DATA;
+    input EMB_TX_REQ;
+    input FRAME_ALT;
+    input [31:0] PA_DST_IP;
+    input [47:0] PA_DST_MAC;
+    input [15:0] PA_DST_PORT;
+    input PA_LINK_ON;
+    input PA_RX_OK;
+    input [31:0] PA_SRC_IP;
+    input [47:0] PA_SRC_MAC;
+    input [15:0] PA_SRC_PORT;
+    input RX_FAN_ON;
+    input SS_NE;
+    input STARTN_DLY;
+    input tcm_e;
+    input tcm_v;
+    input [7:0] tcm_wd;
+    input TX_CLK;
+   output [79:0] EMB_RSP_DATA;
+   output EMB_RSP_REQ;
+   output EMB_TXD;
+   output [3:0] PA_TXD;
+   output PA_TX_EN;
+   output RH_CSUM_OK_P;
+   output SENS_SCL;
+   output SENS_SCL_TP;
+   output SENS_SDA_TP;
+   output TMP_CSUM_OK_P;
+    inout SENS_SDA;
+   
+   wire [15:0] EMB_HUMID;
+   wire [15:0] EMB_POWER1;
+   wire [15:0] EMB_POWER2;
+   wire [15:0] EMB_POWER3;
+   wire [15:0] EMB_POWER4;
+   wire [15:0] EMB_POWER5;
+   wire [15:0] EMB_POWER6;
+   wire [15:0] EMB_POWER7;
+   wire [15:0] EMB_POWER8;
+   wire [15:0] EMB_TEMP;
+   wire H;
+   wire [15:0] SENS_HUMID;
+   wire [15:0] SENS_POWER;
+   wire [15:0] SENS_TEMP;
+   wire STARTN;
+   wire XLXN_86;
+   wire XLXN_89;
+   wire SENS_SCL_TP_DUMMY;
+   wire SENS_SDA_TP_DUMMY;
+   
+   assign SENS_SCL_TP = SENS_SCL_TP_DUMMY;
+   assign SENS_SDA_TP = SENS_SDA_TP_DUMMY;
+   adc_sensor_ctrl_b  adc_sensor0 (.clk(CLK25M), 
+                                  .frame_alt(FRAME_ALT), 
+                                  .sda_in(SENS_SDA_TP_DUMMY), 
+                                  .startn_in(STARTN), 
+                                  .adc_err_det(), 
+                                  .adc2_err_det(), 
+                                  .busy(), 
+                                  .cnt_rst(), 
+                                  .rh_csum_ok_p(RH_CSUM_OK_P), 
+                                  .rh_dout(SENS_HUMID[15:0]), 
+                                  .scl(SENS_SCL_TP_DUMMY), 
+                                  .sdao(XLXN_86), 
+                                  .sda_ot(XLXN_89), 
+                                  .sens_err_det(), 
+                                  .tmp_csum_ok_p(TMP_CSUM_OK_P), 
+                                  .tmp_dout(SENS_TEMP[15:0]), 
+                                  .volt_dout(SENS_POWER[15:0]));
+   rs232c_emb_MUSER_tx_rcv  rs232c_emb0 (.CLK(CLK72M), 
+                                        .EMB_TX_DATA(EMB_TX_DATA[79:0]), 
+                                        .EMB_TX_REQ(EMB_TX_REQ), 
+                                        .FRAME_ALT(FRAME_ALT), 
+                                        .RXD(EMB_RXD), 
+                                        .SDI_FAN_ON(RX_FAN_ON), 
+                                        .STARTN(STARTN), 
+                                        .STARTN_DLY(STARTN_DLY), 
+                                        .CMD_RX_REQ(), 
+                                        .CMD_TX_REQ(), 
+                                        .EMB_BAUD_RATE(), 
+                                        .EMB_RSP_DATA(EMB_RSP_DATA[79:0]), 
+                                        .EMB_RSP_REQ(EMB_RSP_REQ), 
+                                        .EMB_TP_OUT(), 
+                                        .HUMIDITY1(EMB_HUMID[15:0]), 
+                                        .HUMIDITY2(), 
+                                        .POWER1(EMB_POWER1[15:0]), 
+                                        .POWER2(EMB_POWER2[15:0]), 
+                                        .POWER3(EMB_POWER3[15:0]), 
+                                        .POWER4(EMB_POWER4[15:0]), 
+                                        .POWER5(EMB_POWER5[15:0]), 
+                                        .POWER6(EMB_POWER6[15:0]), 
+                                        .POWER7(EMB_POWER7[15:0]), 
+                                        .POWER8(EMB_POWER8[15:0]), 
+                                        .POWER9(), 
+                                        .RXD_O(), 
+                                        .TEMPERATURE1(EMB_TEMP[15:0]), 
+                                        .TEMPERATURE2(), 
+                                        .TXD(EMB_TXD));
+   tx_process_MUSER_tx_rcv  tx_process_a (.CLK25M(CLK25M), 
+                                         .DST_IP(PA_DST_IP[31:0]), 
+                                         .DST_MAC(PA_DST_MAC[47:0]), 
+                                         .DST_PORT(PA_DST_PORT[15:0]), 
+                                         .frame_alt(FRAME_ALT), 
+                                         .HUMID1(SENS_HUMID[15:0]), 
+                                         .HUMID2(EMB_HUMID[15:0]), 
+                                         .LINK_ON(PA_LINK_ON), 
+                                         .POWER1(SENS_POWER[15:0]), 
+                                         .POWER2(EMB_POWER1[15:0]), 
+                                         .RX_OK(PA_RX_OK), 
+                                         .SRC_IP(PA_SRC_IP[31:0]), 
+                                         .SRC_MAC(PA_SRC_MAC[47:0]), 
+                                         .SRC_PORT(PA_SRC_PORT[15:0]), 
+                                         .SS_NE(SS_NE), 
+                                         .tcm_e(tcm_e), 
+                                         .tcm_v(tcm_v), 
+                                         .tcm_wd(tcm_wd[7:0]), 
+                                         .TEMP1(SENS_TEMP[15:0]), 
+                                         .TEMP2(EMB_TEMP[15:0]), 
+                                         .TX_CLK(TX_CLK), 
+                                         .TXD(PA_TXD[3:0]), 
+                                         .TX_EN(PA_TX_EN));
+   (* IOSTANDARD = "DEFAULT" *) (* SLEW = "SLOW" *) (* DRIVE = "12" *) (* 
+         IBUF_DELAY_VALUE = "0" *) (* IFD_DELAY_VALUE = "AUTO" *) 
+   IOBUF  XLXI_25 (.I(XLXN_86), 
+                  .T(XLXN_89), 
+                  .O(SENS_SDA_TP_DUMMY), 
+                  .IO(SENS_SDA));
+   (* IOSTANDARD = "DEFAULT" *) (* SLEW = "SLOW" *) (* DRIVE = "12" *) 
+   OBUF  XLXI_26 (.I(SENS_SCL_TP_DUMMY), 
+                 .O(SENS_SCL));
+   INV  XLXI_32 (.I(C_DONE), 
+                .O(STARTN));
+   VCC  XLXI_33 (.P(H));
+endmodule

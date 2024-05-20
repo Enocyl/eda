@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="uart_if_impact_a">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2014-3-14T8:33:19</timestamp>
+    <attr value="uart_if_impact_a" name="VeriModel" />
+    <pin polarity="Input" x="0" y="-336" name="clk" />
+    <pin polarity="Input" x="0" y="-384" name="rst" />
+    <pin polarity="Input" x="0" y="-1248" name="rx_vld" />
+    <pin polarity="Input" x="0" y="-1152" name="rx_frm_err" />
+    <pin polarity="Input" x="0" y="-1104" name="rx_prty_err" />
+    <pin polarity="Input" x="0" y="-1056" name="rx_time_out_on" />
+    <pin polarity="Input" x="0" y="-240" name="xl_mode" />
+    <pin polarity="Input" x="0" y="-528" name="tx_busy" />
+    <pin polarity="Input" x="0" y="-480" name="tx_done" />
+    <pin polarity="Input" x="0" y="-672" name="rsp_req" />
+    <pin polarity="Input" x="0" y="-1200" name="rx_data(7:0)" />
+    <pin polarity="Input" x="0" y="-768" name="cmd_ram_ra(6:0)" />
+    <pin polarity="Input" x="0" y="-624" name="rsp_data(79:0)" />
+    <pin polarity="Output" x="512" y="-768" name="rx_time_out" />
+    <pin polarity="Output" x="512" y="-1248" name="exe_req" />
+    <pin polarity="Output" x="512" y="-1200" name="rcv_ok" />
+    <pin polarity="Output" x="512" y="-432" name="emb_cmd" />
+    <pin polarity="Output" x="512" y="-384" name="emb_cmd_rcv_ok" />
+    <pin polarity="Output" x="512" y="-240" name="m5_cmd" />
+    <pin polarity="Output" x="512" y="-192" name="m5_cmd_rcv_ok" />
+    <pin polarity="Output" x="512" y="-336" name="emb_tx_req" />
+    <pin polarity="Output" x="512" y="-144" name="m5_tx_req" />
+    <pin polarity="Output" x="512" y="-720" name="cmd_com_buf_write" />
+    <pin polarity="Output" x="512" y="-624" name="cmd_com_buf_we" />
+    <pin polarity="Output" x="512" y="48" name="tx_vld" />
+    <pin polarity="Output" x="512" y="144" name="tx_brk" />
+    <pin polarity="Output" x="512" y="-528" name="rsp_done" />
+    <pin polarity="Output" x="512" y="-480" name="rsp_ram_re" />
+    <pin polarity="Output" x="512" y="-48" name="m5_rsp_ram_re" />
+    <pin polarity="Output" x="512" y="-1152" name="exe_p5(7:0)" />
+    <pin polarity="Output" x="512" y="-1104" name="exe_p4(7:0)" />
+    <pin polarity="Output" x="512" y="-1056" name="exe_p3(7:0)" />
+    <pin polarity="Output" x="512" y="-1008" name="exe_p2(7:0)" />
+    <pin polarity="Output" x="512" y="-960" name="exe_p1(7:0)" />
+    <pin polarity="Output" x="512" y="-912" name="exe_p0(7:0)" />
+    <pin polarity="Output" x="512" y="-864" name="exe_cmd_num(5:0)" />
+    <pin polarity="Output" x="512" y="-288" name="emb_tx_data(79:0)" />
+    <pin polarity="Output" x="512" y="-96" name="m5_tx_data(79:0)" />
+    <pin polarity="Output" x="512" y="-816" name="cmd_ram_do(7:0)" />
+    <pin polarity="Output" x="512" y="-672" name="cmd_com_buf_wa(7:0)" />
+    <pin polarity="Output" x="512" y="96" name="tx_data(7:0)" />
+    <graph>
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="256" y="-1288" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-336" type="pin clk" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-384" type="pin rst" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1248" type="pin rx_vld" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1152" type="pin rx_frm_err" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1104" type="pin rx_prty_err" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1056" type="pin rx_time_out_on" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-240" type="pin xl_mode" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-528" type="pin tx_busy" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-480" type="pin tx_done" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-672" type="pin rsp_req" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1200" type="pin rx_data(7:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-768" type="pin cmd_ram_ra(6:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-624" type="pin rsp_data(79:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-768" type="pin rx_time_out" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-1248" type="pin exe_req" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-1200" type="pin rcv_ok" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-432" type="pin emb_cmd" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-384" type="pin emb_cmd_rcv_ok" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-240" type="pin m5_cmd" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-192" type="pin m5_cmd_rcv_ok" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-336" type="pin emb_tx_req" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-144" type="pin m5_tx_req" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-720" type="pin cmd_com_buf_write" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-624" type="pin cmd_com_buf_we" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="48" type="pin tx_vld" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="144" type="pin tx_brk" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-528" type="pin rsp_done" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-480" type="pin rsp_ram_re" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-48" type="pin m5_rsp_ram_re" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-1152" type="pin exe_p5(7:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-1104" type="pin exe_p4(7:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-1056" type="pin exe_p3(7:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-1008" type="pin exe_p2(7:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-960" type="pin exe_p1(7:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-912" type="pin exe_p0(7:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-864" type="pin exe_cmd_num(5:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-288" type="pin emb_tx_data(79:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-96" type="pin m5_tx_data(79:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-816" type="pin cmd_ram_do(7:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-672" type="pin cmd_com_buf_wa(7:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="96" type="pin tx_data(7:0)" />
+        <line x2="0" y1="-240" y2="-240" x1="64" />
+        <line x2="0" y1="-1248" y2="-1248" x1="64" />
+        <rect width="64" x="0" y="-1212" height="24" />
+        <line x2="0" y1="-1200" y2="-1200" x1="64" />
+        <line x2="0" y1="-1152" y2="-1152" x1="64" />
+        <line x2="0" y1="-1104" y2="-1104" x1="64" />
+        <line x2="0" y1="-1056" y2="-1056" x1="64" />
+        <line x2="512" y1="-1248" y2="-1248" x1="448" />
+        <line x2="512" y1="-1200" y2="-1200" x1="448" />
+        <rect width="64" x="448" y="-1164" height="24" />
+        <line x2="512" y1="-1152" y2="-1152" x1="448" />
+        <rect width="64" x="448" y="-1116" height="24" />
+        <line x2="512" y1="-1104" y2="-1104" x1="448" />
+        <rect width="64" x="448" y="-1068" height="24" />
+        <line x2="512" y1="-1056" y2="-1056" x1="448" />
+        <rect width="64" x="448" y="-1020" height="24" />
+        <line x2="512" y1="-1008" y2="-1008" x1="448" />
+        <rect width="64" x="448" y="-972" height="24" />
+        <line x2="512" y1="-960" y2="-960" x1="448" />
+        <rect width="64" x="448" y="-924" height="24" />
+        <line x2="512" y1="-912" y2="-912" x1="448" />
+        <rect width="64" x="448" y="-876" height="24" />
+        <line x2="512" y1="-864" y2="-864" x1="448" />
+        <rect width="64" x="448" y="-828" height="24" />
+        <line x2="512" y1="-816" y2="-816" x1="448" />
+        <line x2="512" y1="-768" y2="-768" x1="448" />
+        <rect width="64" x="0" y="-780" height="24" />
+        <line x2="0" y1="-768" y2="-768" x1="64" />
+        <line x2="0" y1="-672" y2="-672" x1="64" />
+        <rect width="64" x="0" y="-636" height="24" />
+        <line x2="0" y1="-624" y2="-624" x1="64" />
+        <line x2="0" y1="-528" y2="-528" x1="64" />
+        <line x2="0" y1="-480" y2="-480" x1="64" />
+        <line x2="0" y1="-384" y2="-384" x1="64" />
+        <line x2="0" y1="-336" y2="-336" x1="64" />
+        <line x2="512" y1="-720" y2="-720" x1="448" />
+        <line x2="512" y1="-480" y2="-480" x1="448" />
+        <line x2="512" y1="-528" y2="-528" x1="448" />
+        <line x2="512" y1="-624" y2="-624" x1="448" />
+        <rect width="64" x="448" y="-684" height="24" />
+        <line x2="512" y1="-672" y2="-672" x1="448" />
+        <line x2="512" y1="-432" y2="-432" x1="448" />
+        <line x2="512" y1="-384" y2="-384" x1="448" />
+        <line x2="512" y1="-336" y2="-336" x1="448" />
+        <rect width="64" x="448" y="-300" height="24" />
+        <line x2="512" y1="-288" y2="-288" x1="448" />
+        <rect width="384" x="64" y="-1280" height="1456" />
+        <line x2="512" y1="-240" y2="-240" x1="448" />
+        <line x2="512" y1="-192" y2="-192" x1="448" />
+        <line x2="512" y1="-144" y2="-144" x1="448" />
+        <line x2="512" y1="144" y2="144" x1="448" />
+        <rect width="64" x="448" y="84" height="24" />
+        <line x2="512" y1="96" y2="96" x1="448" />
+        <line x2="512" y1="48" y2="48" x1="448" />
+        <line x2="512" y1="-48" y2="-48" x1="448" />
+        <rect width="64" x="448" y="-108" height="24" />
+        <line x2="512" y1="-96" y2="-96" x1="448" />
+    </graph>
+</symbol>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="fd30">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2014-11-8T8:41:39</timestamp>
+    <attr value="fd30" name="VeriModel" />
+    <pin polarity="Input" x="0" y="-48" name="ck" />
+    <pin polarity="Input" x="0" y="-96" name="d(29:0)" />
+    <pin polarity="Output" x="320" y="-96" name="q(29:0)" />
+    <graph>
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="160" y="-128" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-96" type="pin d(29:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="248" y="-96" type="pin q(29:0)" />
+        <rect width="192" x="64" y="-128" height="112" />
+        <rect width="64" x="0" y="-108" height="24" />
+        <line x2="0" y1="-96" y2="-96" x1="64" />
+        <line x2="0" y1="-48" y2="-48" x1="64" />
+        <rect width="64" x="256" y="-108" height="24" />
+        <line x2="320" y1="-96" y2="-96" x1="256" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-48" type="pin ck" />
+    </graph>
+</symbol>

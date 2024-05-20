@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="rtn_mux_lcar_ru">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2021-11-25T8:46:16</timestamp>
+    <attr value="rtn_mux_lcar_ru" name="VeriModel" />
+    <pin polarity="Input" x="0" y="-1056" name="rx_ok" />
+    <pin polarity="Input" x="0" y="-992" name="link_on" />
+    <pin polarity="Input" x="0" y="-864" name="tx_clk" />
+    <pin polarity="Input" x="0" y="-800" name="clk25M" />
+    <pin polarity="Input" x="0" y="-736" name="tcm_e" />
+    <pin polarity="Input" x="0" y="-672" name="tcm_v" />
+    <pin polarity="Input" x="0" y="-608" name="tx_done" />
+    <pin polarity="Input" x="0" y="-544" name="frame_alt" />
+    <pin polarity="Input" x="0" y="-480" name="power1(15:0)" />
+    <pin polarity="Input" x="0" y="-416" name="power2(15:0)" />
+    <pin polarity="Input" x="0" y="-352" name="temp1(15:0)" />
+    <pin polarity="Input" x="0" y="-288" name="temp2(15:0)" />
+    <pin polarity="Input" x="0" y="-224" name="humid1(15:0)" />
+    <pin polarity="Input" x="0" y="-160" name="humid2(15:0)" />
+    <pin polarity="Input" x="0" y="-96" name="tcm_ra(8:0)" />
+    <pin polarity="Input" x="0" y="-32" name="tcm_wd(7:0)" />
+    <pin polarity="Output" x="384" y="-1056" name="tx_en" />
+    <pin polarity="Output" x="384" y="-544" name="tx_on" />
+    <pin polarity="Output" x="384" y="-32" name="dout(7:0)" />
+    <pin polarity="Input" x="0" y="32" name="ss_ne" />
+    <graph>
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="192" y="-1096" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1056" type="pin rx_ok" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-992" type="pin link_on" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-864" type="pin tx_clk" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-800" type="pin clk25M" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-736" type="pin tcm_e" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-672" type="pin tcm_v" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-608" type="pin tx_done" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-544" type="pin frame_alt" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-480" type="pin power1(15:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-416" type="pin power2(15:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-352" type="pin temp1(15:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-288" type="pin temp2(15:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-224" type="pin humid1(15:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-160" type="pin humid2(15:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-96" type="pin tcm_ra(8:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin tcm_wd(7:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-1056" type="pin tx_en" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-544" type="pin tx_on" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-32" type="pin dout(7:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="32" type="pin ss_ne" />
+        <line x2="0" y1="32" y2="32" x1="64" />
+        <line x2="0" y1="-1056" y2="-1056" x1="64" />
+        <line x2="0" y1="-992" y2="-992" x1="64" />
+        <line x2="0" y1="-864" y2="-864" x1="64" />
+        <line x2="0" y1="-800" y2="-800" x1="64" />
+        <line x2="0" y1="-736" y2="-736" x1="64" />
+        <line x2="0" y1="-672" y2="-672" x1="64" />
+        <line x2="0" y1="-608" y2="-608" x1="64" />
+        <line x2="0" y1="-544" y2="-544" x1="64" />
+        <rect width="64" x="0" y="-492" height="24" />
+        <line x2="0" y1="-480" y2="-480" x1="64" />
+        <rect width="64" x="0" y="-428" height="24" />
+        <line x2="0" y1="-416" y2="-416" x1="64" />
+        <rect width="64" x="0" y="-364" height="24" />
+        <line x2="0" y1="-352" y2="-352" x1="64" />
+        <rect width="64" x="0" y="-300" height="24" />
+        <line x2="0" y1="-288" y2="-288" x1="64" />
+        <rect width="64" x="0" y="-236" height="24" />
+        <line x2="0" y1="-224" y2="-224" x1="64" />
+        <rect width="64" x="0" y="-172" height="24" />
+        <line x2="0" y1="-160" y2="-160" x1="64" />
+        <rect width="64" x="0" y="-108" height="24" />
+        <line x2="0" y1="-96" y2="-96" x1="64" />
+        <rect width="64" x="0" y="-44" height="24" />
+        <line x2="0" y1="-32" y2="-32" x1="64" />
+        <line x2="384" y1="-1056" y2="-1056" x1="320" />
+        <line x2="384" y1="-544" y2="-544" x1="320" />
+        <rect width="64" x="320" y="-44" height="24" />
+        <line x2="384" y1="-32" y2="-32" x1="320" />
+        <rect width="256" x="64" y="-1088" height="1152" />
+    </graph>
+</symbol>

@@ -1,0 +1,538 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : video_proc.vf
+// /___/   /\     Timestamp : 12/09/2021 14:15:25
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: D:\software\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family aspartan6 -verilog ../video_proc.vf -w ../video_proc.sch
+//Design Name: video_proc
+//Device: aspartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FD16CE_HXILINX_video_proc(Q, C, CE, CLR, D);
+
+   
+   output [15:0]      Q;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   input  [15:0]      D;
+   
+   reg    [15:0]      Q;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 16'b0000_0000_0000_0000;
+	else if (CE)
+          Q <= D;
+     end
+   
+   
+endmodule
+`timescale 100 ps / 10 ps
+
+module FD4CE_HXILINX_video_proc(Q0, Q1, Q2, Q3, C, CE, CLR, D0, D1, D2, D3);
+   
+   output             Q0;
+   output             Q1;
+   output             Q2;
+   output             Q3;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   input              D0;
+   input              D1;
+   input              D2;
+   input              D3;
+   
+   reg                Q0;
+   reg                Q1;
+   reg                Q2;
+   reg                Q3;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  {Q3, Q2, Q1, Q0} <= 4'b0000;
+	else if (CE)
+          {Q3, Q2, Q1, Q0} <= {D3, D2, D1, D0};
+     end
+   
+   
+endmodule
+`timescale 1ns / 1ps
+
+module f1d16_MUSER_video_proc(CK, 
+                              D, 
+                              Q);
+
+    input CK;
+    input [15:0] D;
+   output [15:0] Q;
+   
+   wire XLXN_16;
+   wire XLXN_19;
+   
+   (* HU_SET = "XLXI_11_0" *) 
+   FD16CE_HXILINX_video_proc  XLXI_11 (.C(CK), 
+                                      .CE(XLXN_19), 
+                                      .CLR(XLXN_16), 
+                                      .D(D[15:0]), 
+                                      .Q(Q[15:0]));
+   GND  XLXI_12 (.G(XLXN_16));
+   VCC  XLXI_13 (.P(XLXN_19));
+endmodule
+`timescale 1ns / 1ps
+
+module fd1e_MUSER_video_proc(CE, 
+                             CK, 
+                             D, 
+                             Q);
+
+    input CE;
+    input CK;
+    input D;
+   output Q;
+   
+   wire XLXN_1;
+   
+   FDCE  XLXI_1 (.C(CK), 
+                .CE(CE), 
+                .CLR(XLXN_1), 
+                .D(D), 
+                .Q(Q));
+   GND  XLXI_2 (.G(XLXN_1));
+endmodule
+`timescale 1ns / 1ps
+
+module m4_mult_xt2p5_a_MUSER_video_proc(BIN, 
+                                        CF0D, 
+                                        CF1D, 
+                                        CF2D, 
+                                        CF3D, 
+                                        CF4D, 
+                                        CF5D, 
+                                        CF6D, 
+                                        CF7D, 
+                                        CF8D, 
+                                        CLK, 
+                                        GIN, 
+                                        M4_ON, 
+                                        OVP, 
+                                        RIN, 
+                                        BOUT, 
+                                        BR, 
+                                        GOUT, 
+                                        ROUT);
+
+    input [15:0] BIN;
+    input [12:0] CF0D;
+    input [12:0] CF1D;
+    input [12:0] CF2D;
+    input [12:0] CF3D;
+    input [12:0] CF4D;
+    input [12:0] CF5D;
+    input [12:0] CF6D;
+    input [12:0] CF7D;
+    input [12:0] CF8D;
+    input CLK;
+    input [15:0] GIN;
+    input M4_ON;
+    input OVP;
+    input [15:0] RIN;
+   output [15:0] BOUT;
+   output [35:0] BR;
+   output [15:0] GOUT;
+   output [15:0] ROUT;
+   
+   wire [35:0] BB;
+   wire [35:0] BG;
+   wire [35:0] GB;
+   wire [35:0] GG;
+   wire [35:0] GR;
+   wire L;
+   wire [35:0] RB;
+   wire [35:0] RG;
+   wire [35:0] RR;
+   wire XLXN_1;
+   wire [35:0] BR_DUMMY;
+   
+   assign BR[35:0] = BR_DUMMY[35:0];
+   GND  XLXI_15 (.G(L));
+   signed_mult_18x18  XLXI_39 (.a({L, L, RIN[15:0]}), 
+                              .b({L, L, L, L, L, CF0D[12:0]}), 
+                              .clk(CLK), 
+                              .p(RR[35:0]));
+   signed_mult_18x18  XLXI_42 (.a({L, L, RIN[15:0]}), 
+                              .b({CF1D[12], CF1D[12], CF1D[12], CF1D[12], 
+         CF1D[12], CF1D[12:0]}), 
+                              .clk(CLK), 
+                              .p(RG[35:0]));
+   signed_mult_18x18  XLXI_43 (.a({L, L, RIN[15:0]}), 
+                              .b({CF2D[12], CF2D[12], CF2D[12], CF2D[12], 
+         CF2D[12], CF2D[12:0]}), 
+                              .clk(CLK), 
+                              .p(RB[35:0]));
+   signed_mult_18x18  XLXI_44 (.a({L, L, GIN[15:0]}), 
+                              .b({CF3D[12], CF3D[12], CF3D[12], CF3D[12], 
+         CF3D[12], CF3D[12:0]}), 
+                              .clk(CLK), 
+                              .p(GR[35:0]));
+   signed_mult_18x18  XLXI_45 (.a({L, L, GIN[15:0]}), 
+                              .b({L, L, L, L, L, CF4D[12:0]}), 
+                              .clk(CLK), 
+                              .p(GG[35:0]));
+   signed_mult_18x18  XLXI_46 (.a({L, L, GIN[15:0]}), 
+                              .b({CF5D[12], CF5D[12], CF5D[12], CF5D[12], 
+         CF5D[12], CF5D[12:0]}), 
+                              .clk(CLK), 
+                              .p(GB[35:0]));
+   signed_mult_18x18  XLXI_47 (.a({L, L, BIN[15:0]}), 
+                              .b({CF6D[12], CF6D[12], CF6D[12], CF6D[12], 
+         CF6D[12], CF6D[12:0]}), 
+                              .clk(CLK), 
+                              .p(BR_DUMMY[35:0]));
+   signed_mult_18x18  XLXI_48 (.a({L, L, BIN[15:0]}), 
+                              .b({CF7D[12], CF7D[12], CF7D[12], CF7D[12], 
+         CF7D[12], CF7D[12:0]}), 
+                              .clk(CLK), 
+                              .p(BG[35:0]));
+   signed_mult_18x18  XLXI_49 (.a({L, L, BIN[15:0]}), 
+                              .b({L, L, L, L, L, CF8D[12:0]}), 
+                              .clk(CLK), 
+                              .p(BB[35:0]));
+   m4_postmult_xt2p5_a  XLXI_50 (.bb(BB[30:0]), 
+                                .bg(BG[30:0]), 
+                                .bin(BIN[15:0]), 
+                                .br(BR_DUMMY[30:0]), 
+                                .cf0d(CF0D[12:0]), 
+                                .cf4d(CF4D[12:0]), 
+                                .cf8d(CF8D[12:0]), 
+                                .clk(CLK), 
+                                .gb(GB[30:0]), 
+                                .gg(GG[30:0]), 
+                                .gin(GIN[15:0]), 
+                                .gr(GR[30:0]), 
+                                .m4_on(XLXN_1), 
+                                .rb(RB[30:0]), 
+                                .rg(RG[30:0]), 
+                                .rin(RIN[15:0]), 
+                                .rr(RR[30:0]), 
+                                .bout(BOUT[15:0]), 
+                                .gout(GOUT[15:0]), 
+                                .rout(ROUT[15:0]));
+   fd1e_MUSER_video_proc  XLXI_51 (.CE(OVP), 
+                                  .CK(CLK), 
+                                  .D(M4_ON), 
+                                  .Q(XLXN_1));
+endmodule
+`timescale 1ns / 1ps
+
+module fd4e_MUSER_video_proc(CE, 
+                             CK, 
+                             D, 
+                             Q);
+
+    input CE;
+    input CK;
+    input [3:0] D;
+   output [3:0] Q;
+   
+   wire XLXN_3;
+   
+   (* HU_SET = "XLXI_1_1" *) 
+   FD4CE_HXILINX_video_proc  XLXI_1 (.C(CK), 
+                                    .CE(CE), 
+                                    .CLR(XLXN_3), 
+                                    .D0(D[0]), 
+                                    .D1(D[1]), 
+                                    .D2(D[2]), 
+                                    .D3(D[3]), 
+                                    .Q0(Q[0]), 
+                                    .Q1(Q[1]), 
+                                    .Q2(Q[2]), 
+                                    .Q3(Q[3]));
+   GND  XLXI_7 (.G(XLXN_3));
+endmodule
+`timescale 1ns / 1ps
+
+module gamma_ctemp_mpc_MUSER_video_proc(CLK, 
+                                        CT_GAIN, 
+                                        DIN, 
+                                        GAMMA, 
+                                        OVP, 
+                                        DOUT);
+
+    input CLK;
+    input [3:0] CT_GAIN;
+    input [9:0] DIN;
+    input [2:0] GAMMA;
+    input OVP;
+   output [15:0] DOUT;
+   
+   wire [3:0] GAIN;
+   wire [15:0] XLXN_61;
+   wire [15:0] XLXN_64;
+   wire XLXN_74;
+   
+   gamma28_rom_mpc  XLXI_8 (.addra(DIN[9:0]), 
+                           .clka(CLK), 
+                           .ena(XLXN_74), 
+                           .douta(XLXN_61[15:0]));
+   VCC  XLXI_11 (.P(XLXN_74));
+   f1d16_MUSER_video_proc  XLXI_21 (.CK(CLK), 
+                                   .D(XLXN_61[15:0]), 
+                                   .Q(XLXN_64[15:0]));
+   ctemp_multi_mpc  XLXI_22 (.clk(CLK), 
+                            .din(XLXN_64[15:0]), 
+                            .gain(GAIN[3:0]), 
+                            .dout(DOUT[15:0]));
+   fd4e_MUSER_video_proc  XLXI_52 (.CE(OVP), 
+                                  .CK(CLK), 
+                                  .D(CT_GAIN[3:0]), 
+                                  .Q(GAIN[3:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module video_proc(BRIGHTNESS, 
+                  CHECK, 
+                  CLK, 
+                  CT_BLUE, 
+                  CT_GREEN, 
+                  CT_RED, 
+                  FM_CYCLE_STP_ADV, 
+                  FM_IV_WR_CYCLE, 
+                  FM_OV_RD_CYCLE, 
+                  FM_RD_D, 
+                  FRAME_ALT, 
+                  FRAME_ALT_FRZ, 
+                  GAMMA, 
+                  M4_BRT, 
+                  M4_ON, 
+                  OVP, 
+                  PANEL_SEL, 
+                  FM_IN_RD_BLUE, 
+                  FM_IN_RD_GREEN, 
+                  FM_IN_RD_RED, 
+                  FM_IN_VID_RD_ADRS, 
+                  FM_IV_RD_CYCLE, 
+                  FM_M4_CF_RD_ADRS, 
+                  FM_OV_WR_ADRS, 
+                  FM_OV_WR_CYCLE, 
+                  FM_OV_WR_D);
+
+    input [6:0] BRIGHTNESS;
+    input CHECK;
+    input CLK;
+    input [3:0] CT_BLUE;
+    input [3:0] CT_GREEN;
+    input [3:0] CT_RED;
+    input FM_CYCLE_STP_ADV;
+    input FM_IV_WR_CYCLE;
+    input FM_OV_RD_CYCLE;
+    input [29:0] FM_RD_D;
+    input FRAME_ALT;
+    input FRAME_ALT_FRZ;
+    input [2:0] GAMMA;
+    input [6:0] M4_BRT;
+    input M4_ON;
+    input OVP;
+    input [3:0] PANEL_SEL;
+   output [9:0] FM_IN_RD_BLUE;
+   output [9:0] FM_IN_RD_GREEN;
+   output [9:0] FM_IN_RD_RED;
+   output [16:0] FM_IN_VID_RD_ADRS;
+   output FM_IV_RD_CYCLE;
+   output [18:0] FM_M4_CF_RD_ADRS;
+   output [18:0] FM_OV_WR_ADRS;
+   output FM_OV_WR_CYCLE;
+   output [31:0] FM_OV_WR_D;
+   
+   wire [15:0] B_M4IN;
+   wire [12:0] CF0D;
+   wire [12:0] CF1D;
+   wire [12:0] CF2D;
+   wire [12:0] CF3D;
+   wire [12:0] CF4D;
+   wire [12:0] CF5D;
+   wire [12:0] CF6D;
+   wire [12:0] CF7D;
+   wire [12:0] CF8D;
+   wire [15:0] G_M4IN;
+   wire [15:0] R_M4IN;
+   wire [15:0] XLXN_1513;
+   wire [15:0] XLXN_1514;
+   wire [15:0] XLXN_1515;
+   wire [15:0] XLXN_1670;
+   wire [15:0] XLXN_1671;
+   wire [15:0] XLXN_1672;
+   wire [15:0] XLXN_1675;
+   wire [15:0] XLXN_1676;
+   wire [15:0] XLXN_1678;
+   wire [15:0] XLXN_1817;
+   wire [15:0] XLXN_1818;
+   wire [15:0] XLXN_1819;
+   wire [15:0] XLXN_2105;
+   wire [15:0] XLXN_2106;
+   wire [15:0] XLXN_2108;
+   wire [15:0] XLXN_2127;
+   wire [9:0] FM_IN_RD_BLUE_DUMMY;
+   wire [9:0] FM_IN_RD_GREEN_DUMMY;
+   wire [9:0] FM_IN_RD_RED_DUMMY;
+   wire FM_IV_RD_CYCLE_DUMMY;
+   
+   assign FM_IN_RD_BLUE[9:0] = FM_IN_RD_BLUE_DUMMY[9:0];
+   assign FM_IN_RD_GREEN[9:0] = FM_IN_RD_GREEN_DUMMY[9:0];
+   assign FM_IN_RD_RED[9:0] = FM_IN_RD_RED_DUMMY[9:0];
+   assign FM_IV_RD_CYCLE = FM_IV_RD_CYCLE_DUMMY;
+   fm_in_video_read_lcar_m5353Q_14b43Hz  fm_in0 (.clk(CLK), 
+                                                
+         .fm_cycle_stp_adv(FM_CYCLE_STP_ADV), 
+                                                
+         .fm_iv_wr_cycle(FM_IV_WR_CYCLE), 
+                                                
+         .fm_ov_rd_cycle(FM_OV_RD_CYCLE), 
+                                                .fm_rd_d(FM_RD_D[29:0]), 
+                                                .frame_alt(FRAME_ALT), 
+                                                .ovp(OVP), 
+                                                .panel_sel(PANEL_SEL[3:0]), 
+                                                
+         .blue(FM_IN_RD_BLUE_DUMMY[9:0]), 
+                                                .cf0d(CF0D[12:0]), 
+                                                .cf1d(CF1D[12:0]), 
+                                                .cf2d(CF2D[12:0]), 
+                                                .cf3d(CF3D[12:0]), 
+                                                .cf4d(CF4D[12:0]), 
+                                                .cf5d(CF5D[12:0]), 
+                                                .cf6d(CF6D[12:0]), 
+                                                .cf7d(CF7D[12:0]), 
+                                                .cf8d(CF8D[12:0]), 
+                                                
+         .fm_in_vid_rd_adrs(FM_IN_VID_RD_ADRS[16:0]), 
+                                                
+         .fm_iv_rd_cycle(FM_IV_RD_CYCLE_DUMMY), 
+                                                
+         .fm_m4_cf_rd_adrs(FM_M4_CF_RD_ADRS[18:0]), 
+                                                
+         .green(FM_IN_RD_GREEN_DUMMY[9:0]), 
+                                                .red(FM_IN_RD_RED_DUMMY[9:0]));
+   fm_out_video_write_pv2_4_4x4  fm_out0 (.b_din(XLXN_2108[15:0]), 
+                                         .clk(CLK), 
+                                         .fm_cycle_stp_adv(FM_CYCLE_STP_ADV), 
+                                         .fm_iv_rd_cycle(FM_IV_RD_CYCLE_DUMMY), 
+                                         .fm_iv_wr_cycle(FM_IV_WR_CYCLE), 
+                                         .fm_ov_rd_cycle(FM_OV_RD_CYCLE), 
+                                         .frame_alt(FRAME_ALT_FRZ), 
+                                         .g_din(XLXN_2106[15:0]), 
+                                         .ovp(OVP), 
+                                         .r_din(XLXN_2105[15:0]), 
+                                         .fm_ov_wr_adrs(FM_OV_WR_ADRS[18:0]), 
+                                         .fm_ov_wr_cycle(FM_OV_WR_CYCLE), 
+                                         .fm_ov_wr_d(FM_OV_WR_D[31:0]));
+   gamma_ctemp_mpc_MUSER_video_proc  XLXI_81 (.CLK(CLK), 
+                                             .CT_GAIN(CT_RED[3:0]), 
+                                             .DIN(FM_IN_RD_RED_DUMMY[9:0]), 
+                                             .GAMMA(GAMMA[2:0]), 
+                                             .OVP(OVP), 
+                                             .DOUT(XLXN_1513[15:0]));
+   gamma_ctemp_mpc_MUSER_video_proc  XLXI_90 (.CLK(CLK), 
+                                             .CT_GAIN(CT_GREEN[3:0]), 
+                                             .DIN(FM_IN_RD_GREEN_DUMMY[9:0]), 
+                                             .GAMMA(GAMMA[2:0]), 
+                                             .OVP(OVP), 
+                                             .DOUT(XLXN_1514[15:0]));
+   gamma_ctemp_mpc_MUSER_video_proc  XLXI_91 (.CLK(CLK), 
+                                             .CT_GAIN(CT_BLUE[3:0]), 
+                                             .DIN(FM_IN_RD_BLUE_DUMMY[9:0]), 
+                                             .GAMMA(GAMMA[2:0]), 
+                                             .OVP(OVP), 
+                                             .DOUT(XLXN_1515[15:0]));
+   sel16  XLXI_383 (.ia(XLXN_1675[15:0]), 
+                   .ib(XLXN_2127[15:0]), 
+                   .s(CHECK), 
+                   .o(XLXN_1817[15:0]));
+   sel16  XLXI_384 (.ia(XLXN_1678[15:0]), 
+                   .ib(XLXN_2127[15:0]), 
+                   .s(CHECK), 
+                   .o(XLXN_1818[15:0]));
+   sel16  XLXI_385 (.ia(XLXN_1676[15:0]), 
+                   .ib(XLXN_2127[15:0]), 
+                   .s(CHECK), 
+                   .o(XLXN_1819[15:0]));
+   f1d16_MUSER_video_proc  XLXI_425 (.CK(CLK), 
+                                    .D(XLXN_1817[15:0]), 
+                                    .Q(XLXN_2105[15:0]));
+   f1d16_MUSER_video_proc  XLXI_426 (.CK(CLK), 
+                                    .D(XLXN_1818[15:0]), 
+                                    .Q(XLXN_2106[15:0]));
+   f1d16_MUSER_video_proc  XLXI_427 (.CK(CLK), 
+                                    .D(XLXN_1819[15:0]), 
+                                    .Q(XLXN_2108[15:0]));
+   m4_mult_xt2p5_a_MUSER_video_proc  XLXI_456 (.BIN(B_M4IN[15:0]), 
+                                              .CF0D(CF0D[12:0]), 
+                                              .CF1D(CF1D[12:0]), 
+                                              .CF2D(CF2D[12:0]), 
+                                              .CF3D(CF3D[12:0]), 
+                                              .CF4D(CF4D[12:0]), 
+                                              .CF5D(CF5D[12:0]), 
+                                              .CF6D(CF6D[12:0]), 
+                                              .CF7D(CF7D[12:0]), 
+                                              .CF8D(CF8D[12:0]), 
+                                              .CLK(CLK), 
+                                              .GIN(G_M4IN[15:0]), 
+                                              .M4_ON(M4_ON), 
+                                              .OVP(OVP), 
+                                              .RIN(R_M4IN[15:0]), 
+                                              .BOUT(XLXN_1676[15:0]), 
+                                              .BR(), 
+                                              .GOUT(XLXN_1678[15:0]), 
+                                              .ROUT(XLXN_1675[15:0]));
+   f1d16_MUSER_video_proc  XLXI_459 (.CK(CLK), 
+                                    .D({M4_ON, GAMMA[2:0], CT_BLUE[3:0], 
+         CT_GREEN[3:0], CT_RED[3:0]}), 
+                                    .Q(XLXN_2127[15:0]));
+   brightness_mpc_b  XLXI_473 (.brightness(BRIGHTNESS[6:0]), 
+                              .clk(CLK), 
+                              .din(XLXN_1670[15:0]), 
+                              .ovp(OVP), 
+                              .dout(R_M4IN[15:0]));
+   brightness_mpc_b  XLXI_474 (.brightness(BRIGHTNESS[6:0]), 
+                              .clk(CLK), 
+                              .din(XLXN_1671[15:0]), 
+                              .ovp(OVP), 
+                              .dout(G_M4IN[15:0]));
+   brightness_mpc_b  XLXI_475 (.brightness(BRIGHTNESS[6:0]), 
+                              .clk(CLK), 
+                              .din(XLXN_1672[15:0]), 
+                              .ovp(OVP), 
+                              .dout(B_M4IN[15:0]));
+   brightness_mpc_b  XLXI_476 (.brightness(M4_BRT[6:0]), 
+                              .clk(CLK), 
+                              .din(XLXN_1513[15:0]), 
+                              .ovp(OVP), 
+                              .dout(XLXN_1670[15:0]));
+   brightness_mpc_b  XLXI_477 (.brightness(M4_BRT[6:0]), 
+                              .clk(CLK), 
+                              .din(XLXN_1514[15:0]), 
+                              .ovp(OVP), 
+                              .dout(XLXN_1671[15:0]));
+   brightness_mpc_b  XLXI_478 (.brightness(M4_BRT[6:0]), 
+                              .clk(CLK), 
+                              .din(XLXN_1515[15:0]), 
+                              .ovp(OVP), 
+                              .dout(XLXN_1672[15:0]));
+endmodule

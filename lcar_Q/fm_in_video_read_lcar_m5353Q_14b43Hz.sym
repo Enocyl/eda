@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="fm_in_video_read_lcar_m5353Q_14b43Hz">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2021-11-1T9:22:38</timestamp>
+    <attr value="fm_in_video_read_lcar_m5353Q_14b43Hz" name="VeriModel" />
+    <pin polarity="Input" x="0" y="-560" name="clk" />
+    <pin polarity="Input" x="0" y="-704" name="fm_cycle_stp_adv" />
+    <pin polarity="Input" x="0" y="-656" name="fm_iv_wr_cycle" />
+    <pin polarity="Input" x="0" y="-368" name="fm_ov_rd_cycle" />
+    <pin polarity="Input" x="0" y="-608" name="fm_rd_d(29:0)" />
+    <pin polarity="Input" x="0" y="-752" name="frame_alt" />
+    <pin polarity="Input" x="0" y="-800" name="ovp" />
+    <pin polarity="Input" x="0" y="-464" name="panel_sel(3:0)" />
+    <pin polarity="Output" x="608" y="-32" name="blue(9:0)" />
+    <pin polarity="Output" x="608" y="-608" name="cf0d(12:0)" />
+    <pin polarity="Output" x="608" y="-560" name="cf1d(12:0)" />
+    <pin polarity="Output" x="608" y="-512" name="cf2d(12:0)" />
+    <pin polarity="Output" x="608" y="-464" name="cf3d(12:0)" />
+    <pin polarity="Output" x="608" y="-416" name="cf4d(12:0)" />
+    <pin polarity="Output" x="608" y="-368" name="cf5d(12:0)" />
+    <pin polarity="Output" x="608" y="-320" name="cf6d(12:0)" />
+    <pin polarity="Output" x="608" y="-272" name="cf7d(12:0)" />
+    <pin polarity="Output" x="608" y="-224" name="cf8d(12:0)" />
+    <pin polarity="Output" x="608" y="-800" name="fm_in_vid_rd_adrs(16:0)" />
+    <pin polarity="Output" x="608" y="-752" name="fm_iv_rd_cycle" />
+    <pin polarity="Output" x="608" y="-704" name="fm_m4_cf_rd_adrs(18:0)" />
+    <pin polarity="Output" x="608" y="-80" name="green(9:0)" />
+    <pin polarity="Output" x="608" y="-128" name="red(9:0)" />
+    <graph>
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="304" y="-836" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-560" type="pin clk" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-704" type="pin fm_cycle_stp_adv" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-656" type="pin fm_iv_wr_cycle" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-368" type="pin fm_ov_rd_cycle" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-608" type="pin fm_rd_d(29:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-752" type="pin frame_alt" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-800" type="pin ovp" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-464" type="pin panel_sel(3:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="536" y="-32" type="pin blue(9:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="536" y="-608" type="pin cf0d(12:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="536" y="-560" type="pin cf1d(12:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="536" y="-512" type="pin cf2d(12:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="536" y="-464" type="pin cf3d(12:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="536" y="-416" type="pin cf4d(12:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="536" y="-368" type="pin cf5d(12:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="536" y="-320" type="pin cf6d(12:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="536" y="-272" type="pin cf7d(12:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="536" y="-224" type="pin cf8d(12:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="536" y="-800" type="pin fm_in_vid_rd_adrs(16:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="536" y="-752" type="pin fm_iv_rd_cycle" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="536" y="-704" type="pin fm_m4_cf_rd_adrs(18:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="536" y="-80" type="pin green(9:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="536" y="-128" type="pin red(9:0)" />
+        <line x2="0" y1="-704" y2="-704" x1="64" />
+        <line x2="0" y1="-800" y2="-800" x1="64" />
+        <line x2="0" y1="-752" y2="-752" x1="64" />
+        <line x2="0" y1="-656" y2="-656" x1="64" />
+        <rect width="64" x="0" y="-620" height="24" />
+        <line x2="0" y1="-608" y2="-608" x1="64" />
+        <line x2="0" y1="-560" y2="-560" x1="64" />
+        <rect width="64" x="544" y="-812" height="24" />
+        <line x2="608" y1="-800" y2="-800" x1="544" />
+        <line x2="608" y1="-752" y2="-752" x1="544" />
+        <rect width="64" x="544" y="-716" height="24" />
+        <line x2="608" y1="-704" y2="-704" x1="544" />
+        <rect width="64" x="544" y="-620" height="24" />
+        <line x2="608" y1="-608" y2="-608" x1="544" />
+        <rect width="64" x="544" y="-572" height="24" />
+        <line x2="608" y1="-560" y2="-560" x1="544" />
+        <rect width="64" x="544" y="-524" height="24" />
+        <line x2="608" y1="-512" y2="-512" x1="544" />
+        <rect width="64" x="544" y="-476" height="24" />
+        <line x2="608" y1="-464" y2="-464" x1="544" />
+        <rect width="64" x="544" y="-428" height="24" />
+        <line x2="608" y1="-416" y2="-416" x1="544" />
+        <rect width="64" x="544" y="-380" height="24" />
+        <line x2="608" y1="-368" y2="-368" x1="544" />
+        <rect width="64" x="544" y="-332" height="24" />
+        <line x2="608" y1="-320" y2="-320" x1="544" />
+        <rect width="64" x="544" y="-284" height="24" />
+        <line x2="608" y1="-272" y2="-272" x1="544" />
+        <rect width="64" x="544" y="-236" height="24" />
+        <line x2="608" y1="-224" y2="-224" x1="544" />
+        <rect width="64" x="544" y="-44" height="24" />
+        <line x2="608" y1="-32" y2="-32" x1="544" />
+        <rect width="64" x="544" y="-92" height="24" />
+        <line x2="608" y1="-80" y2="-80" x1="544" />
+        <rect width="64" x="544" y="-140" height="24" />
+        <line x2="608" y1="-128" y2="-128" x1="544" />
+        <rect width="64" x="0" y="-476" height="24" />
+        <line x2="0" y1="-464" y2="-464" x1="64" />
+        <rect width="480" x="64" y="-832" height="832" />
+        <line x2="0" y1="-368" y2="-368" x1="64" />
+    </graph>
+</symbol>

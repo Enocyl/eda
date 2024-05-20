@@ -1,0 +1,35 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : fd1.vf
+// /___/   /\     Timestamp : 12/09/2021 14:15:04
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: D:\software\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family aspartan6 -verilog ../fd1.vf -w ../fd1.sch
+//Design Name: fd1
+//Device: aspartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module fd1(CK, 
+           D, 
+           Q);
+
+    input CK;
+    input D;
+   output Q;
+   
+   
+   FD #( .INIT(1'b0) ) XLXI_1 (.C(CK), 
+              .D(D), 
+              .Q(Q));
+endmodule

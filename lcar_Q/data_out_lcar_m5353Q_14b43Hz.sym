@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="data_out_lcar_m5353Q_14b43Hz">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2021-12-6T3:26:1</timestamp>
+    <attr value="data_out_lcar_m5353Q_14b43Hz" name="VeriModel" />
+    <pin polarity="Input" x="0" y="-608" name="fm_cycle_stp" />
+    <pin polarity="Input" x="0" y="-512" name="frame_alt_frz" />
+    <pin polarity="Input" x="0" y="-560" name="frame_alt" />
+    <pin polarity="Input" x="0" y="-368" name="clk" />
+    <pin polarity="Input" x="0" y="-224" name="oclk" />
+    <pin polarity="Input" x="0" y="-656" name="blank" />
+    <pin polarity="Input" x="0" y="-128" name="gclkout_start" />
+    <pin polarity="Input" x="0" y="-416" name="fm_rd_d(31:0)" />
+    <pin polarity="Input" x="0" y="-272" name="rgb_out_zero(2:0)" />
+    <pin polarity="Output" x="496" y="-608" name="fm_ov_rd_cycle" />
+    <pin polarity="Output" x="496" y="-368" name="le_out" />
+    <pin polarity="Output" x="496" y="-320" name="dclk_out" />
+    <pin polarity="Output" x="496" y="-128" name="r_we" />
+    <pin polarity="Output" x="496" y="-80" name="g_we" />
+    <pin polarity="Output" x="496" y="-32" name="b_we" />
+    <pin polarity="Output" x="496" y="-656" name="fm_ov_rd_adrs(18:0)" />
+    <pin polarity="Output" x="496" y="-224" name="scan_line(3:0)" />
+    <pin polarity="Output" x="496" y="-512" name="r_out(15:0)" />
+    <pin polarity="Output" x="496" y="-464" name="g_out(15:0)" />
+    <pin polarity="Output" x="496" y="-416" name="b_out(15:0)" />
+    <graph>
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="248" y="-696" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-608" type="pin fm_cycle_stp" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-512" type="pin frame_alt_frz" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-560" type="pin frame_alt" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-368" type="pin clk" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-224" type="pin oclk" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-656" type="pin blank" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-128" type="pin gclkout_start" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-416" type="pin fm_rd_d(31:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-272" type="pin rgb_out_zero(2:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-608" type="pin fm_ov_rd_cycle" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-368" type="pin le_out" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-320" type="pin dclk_out" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-128" type="pin r_we" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-80" type="pin g_we" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-32" type="pin b_we" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-656" type="pin fm_ov_rd_adrs(18:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-224" type="pin scan_line(3:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-512" type="pin r_out(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-464" type="pin g_out(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-416" type="pin b_out(15:0)" />
+        <line x2="496" y1="-608" y2="-608" x1="432" />
+        <rect width="64" x="432" y="-668" height="24" />
+        <line x2="496" y1="-656" y2="-656" x1="432" />
+        <rect width="64" x="432" y="-524" height="24" />
+        <line x2="496" y1="-512" y2="-512" x1="432" />
+        <rect width="64" x="432" y="-476" height="24" />
+        <line x2="496" y1="-464" y2="-464" x1="432" />
+        <rect width="64" x="432" y="-428" height="24" />
+        <line x2="496" y1="-416" y2="-416" x1="432" />
+        <line x2="0" y1="-608" y2="-608" x1="64" />
+        <line x2="0" y1="-368" y2="-368" x1="64" />
+        <rect width="64" x="0" y="-428" height="24" />
+        <line x2="0" y1="-416" y2="-416" x1="64" />
+        <line x2="0" y1="-224" y2="-224" x1="64" />
+        <rect width="64" x="0" y="-284" height="24" />
+        <line x2="0" y1="-272" y2="-272" x1="64" />
+        <line x2="496" y1="-368" y2="-368" x1="432" />
+        <line x2="496" y1="-320" y2="-320" x1="432" />
+        <line x2="0" y1="-128" y2="-128" x1="64" />
+        <line x2="496" y1="-32" y2="-32" x1="432" />
+        <line x2="496" y1="-80" y2="-80" x1="432" />
+        <line x2="496" y1="-128" y2="-128" x1="432" />
+        <rect width="64" x="432" y="-236" height="24" />
+        <line x2="496" y1="-224" y2="-224" x1="432" />
+        <rect width="368" x="64" y="-688" height="688" />
+        <line x2="0" y1="-656" y2="-656" x1="64" />
+        <line x2="0" y1="-560" y2="-560" x1="64" />
+        <line x2="0" y1="-512" y2="-512" x1="64" />
+    </graph>
+</symbol>

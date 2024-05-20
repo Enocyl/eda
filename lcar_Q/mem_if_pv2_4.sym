@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="mem_if_pv2_4">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2017-4-11T4:47:59</timestamp>
+    <attr value="mem_if_pv2_4" name="VeriModel" />
+    <pin polarity="Input" x="0" y="-80" name="c_done" />
+    <pin polarity="Input" x="0" y="-32" name="clk" />
+    <pin polarity="Input" x="0" y="-1280" name="in_vid_wr_req" />
+    <pin polarity="Input" x="0" y="-1136" name="in_vid_rd_req" />
+    <pin polarity="Input" x="0" y="-992" name="m4_bank1" />
+    <pin polarity="Input" x="0" y="-656" name="out_vid_rd_req" />
+    <pin polarity="Input" x="0" y="-464" name="m4_cf_cmd_rd_req" />
+    <pin polarity="Input" x="0" y="-512" name="m4_cf_cmd_rd_bank1" />
+    <pin polarity="Input" x="0" y="-176" name="m4_cf_cmd_wr_req" />
+    <pin polarity="Input" x="0" y="-272" name="m4_cf_cmd_wr_bank1" />
+    <pin polarity="Input" x="0" y="-800" name="out_vid_wr_req" />
+    <pin polarity="Input" x="0" y="-1328" name="in_vid_wr_adrs(16:0)" />
+    <pin polarity="Input" x="0" y="-1376" name="in_vid_wr_d(29:0)" />
+    <pin polarity="Input" x="0" y="-1184" name="in_vid_rd_adrs(16:0)" />
+    <pin polarity="Input" x="0" y="-1040" name="m4_cf_rd_adrs(18:0)" />
+    <pin polarity="Input" x="0" y="-704" name="out_vid_rd_adrs(18:0)" />
+    <pin polarity="Input" x="0" y="-560" name="m4_cf_cmd_rd_adrs(18:0)" />
+    <pin polarity="Input" x="0" y="-320" name="m4_cf_cmd_wr_adrs(18:0)" />
+    <pin polarity="Input" x="0" y="-224" name="m4_cf_cmd_wr_byten(3:0)" />
+    <pin polarity="Input" x="0" y="-368" name="m4_cf_cmd_wr_d(31:0)" />
+    <pin polarity="Input" x="0" y="-848" name="out_vid_wr_adrs(18:0)" />
+    <pin polarity="Input" x="0" y="-896" name="out_vid_wr_d(31:0)" />
+    <pin polarity="Output" x="528" y="-1376" name="cycle_stp" />
+    <pin polarity="Output" x="528" y="-1328" name="cycle_stp_adv" />
+    <pin polarity="Output" x="528" y="-1232" name="pup_time" />
+    <pin polarity="Output" x="528" y="-1280" name="m4_cmd_cycle" />
+    <pin polarity="Output" x="528" y="-1136" name="cke" />
+    <pin polarity="Output" x="528" y="-1088" name="cs_n" />
+    <pin polarity="Output" x="528" y="-1040" name="ras_n" />
+    <pin polarity="Output" x="528" y="-992" name="cas_n" />
+    <pin polarity="Output" x="528" y="-944" name="we_n" />
+    <pin polarity="Output" x="528" y="-704" name="dot" />
+    <pin polarity="Output" x="528" y="-848" name="ba(1:0)" />
+    <pin polarity="Output" x="528" y="-896" name="adrs(10:0)" />
+    <pin polarity="Output" x="528" y="-800" name="dqm(3:0)" />
+    <pin polarity="Output" x="528" y="-752" name="dq(31:0)" />
+    <graph>
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="264" y="-1416" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-80" type="pin c_done" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin clk" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1280" type="pin in_vid_wr_req" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1136" type="pin in_vid_rd_req" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-992" type="pin m4_bank1" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-656" type="pin out_vid_rd_req" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-464" type="pin m4_cf_cmd_rd_req" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-512" type="pin m4_cf_cmd_rd_bank1" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-176" type="pin m4_cf_cmd_wr_req" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-272" type="pin m4_cf_cmd_wr_bank1" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-800" type="pin out_vid_wr_req" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1328" type="pin in_vid_wr_adrs(16:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1376" type="pin in_vid_wr_d(29:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1184" type="pin in_vid_rd_adrs(16:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1040" type="pin m4_cf_rd_adrs(18:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-704" type="pin out_vid_rd_adrs(18:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-560" type="pin m4_cf_cmd_rd_adrs(18:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-320" type="pin m4_cf_cmd_wr_adrs(18:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-224" type="pin m4_cf_cmd_wr_byten(3:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-368" type="pin m4_cf_cmd_wr_d(31:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-848" type="pin out_vid_wr_adrs(18:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-896" type="pin out_vid_wr_d(31:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="456" y="-1376" type="pin cycle_stp" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="456" y="-1328" type="pin cycle_stp_adv" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="456" y="-1232" type="pin pup_time" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="456" y="-1280" type="pin m4_cmd_cycle" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="456" y="-1136" type="pin cke" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="456" y="-1088" type="pin cs_n" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="456" y="-1040" type="pin ras_n" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="456" y="-992" type="pin cas_n" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="456" y="-944" type="pin we_n" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="456" y="-704" type="pin dot" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="456" y="-848" type="pin ba(1:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="456" y="-896" type="pin adrs(10:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="456" y="-800" type="pin dqm(3:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="456" y="-752" type="pin dq(31:0)" />
+        <line x2="528" y1="-704" y2="-704" x1="464" />
+        <rect width="64" x="464" y="-764" height="24" />
+        <line x2="528" y1="-752" y2="-752" x1="464" />
+        <rect width="64" x="464" y="-812" height="24" />
+        <line x2="528" y1="-800" y2="-800" x1="464" />
+        <rect width="64" x="464" y="-860" height="24" />
+        <line x2="528" y1="-848" y2="-848" x1="464" />
+        <rect width="64" x="464" y="-908" height="24" />
+        <line x2="528" y1="-896" y2="-896" x1="464" />
+        <line x2="528" y1="-944" y2="-944" x1="464" />
+        <line x2="528" y1="-992" y2="-992" x1="464" />
+        <line x2="528" y1="-1040" y2="-1040" x1="464" />
+        <line x2="528" y1="-1088" y2="-1088" x1="464" />
+        <line x2="528" y1="-1136" y2="-1136" x1="464" />
+        <line x2="528" y1="-1376" y2="-1376" x1="464" />
+        <line x2="528" y1="-1328" y2="-1328" x1="464" />
+        <line x2="528" y1="-1232" y2="-1232" x1="464" />
+        <rect width="64" x="0" y="-1340" height="24" />
+        <line x2="0" y1="-1328" y2="-1328" x1="64" />
+        <line x2="0" y1="-1280" y2="-1280" x1="64" />
+        <rect width="64" x="0" y="-1388" height="24" />
+        <line x2="0" y1="-1376" y2="-1376" x1="64" />
+        <line x2="0" y1="-1136" y2="-1136" x1="64" />
+        <rect width="64" x="0" y="-1196" height="24" />
+        <line x2="0" y1="-1184" y2="-1184" x1="64" />
+        <rect width="64" x="0" y="-1052" height="24" />
+        <line x2="0" y1="-1040" y2="-1040" x1="64" />
+        <line x2="0" y1="-992" y2="-992" x1="64" />
+        <rect width="64" x="0" y="-908" height="24" />
+        <line x2="0" y1="-896" y2="-896" x1="64" />
+        <rect width="64" x="0" y="-860" height="24" />
+        <line x2="0" y1="-848" y2="-848" x1="64" />
+        <line x2="0" y1="-800" y2="-800" x1="64" />
+        <line x2="0" y1="-32" y2="-32" x1="64" />
+        <line x2="0" y1="-80" y2="-80" x1="64" />
+        <line x2="0" y1="-176" y2="-176" x1="64" />
+        <rect width="64" x="0" y="-236" height="24" />
+        <line x2="0" y1="-224" y2="-224" x1="64" />
+        <line x2="0" y1="-272" y2="-272" x1="64" />
+        <rect width="64" x="0" y="-332" height="24" />
+        <line x2="0" y1="-320" y2="-320" x1="64" />
+        <rect width="64" x="0" y="-380" height="24" />
+        <line x2="0" y1="-368" y2="-368" x1="64" />
+        <line x2="0" y1="-464" y2="-464" x1="64" />
+        <line x2="0" y1="-512" y2="-512" x1="64" />
+        <rect width="64" x="0" y="-572" height="24" />
+        <line x2="0" y1="-560" y2="-560" x1="64" />
+        <line x2="0" y1="-656" y2="-656" x1="64" />
+        <rect width="64" x="0" y="-716" height="24" />
+        <line x2="0" y1="-704" y2="-704" x1="64" />
+        <rect width="400" x="64" y="-1408" height="1408" />
+        <line x2="528" y1="-1280" y2="-1280" x1="464" />
+    </graph>
+</symbol>

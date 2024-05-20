@@ -1,0 +1,57 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : ofd1s.vf
+// /___/   /\     Timestamp : 12/09/2021 14:15:13
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: D:\software\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family aspartan6 -verilog ../ofd1s.vf -w ../ofd1s.sch
+//Design Name: ofd1s
+//Device: aspartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module OFD_HXILINX_ofd1s(Q, C, D);
+   
+   output             Q;
+
+   input 	      C;	
+   input              D;
+   
+   parameter INIT = 1'b0;
+   (* IOB = "TRUE" *)
+
+   reg                Q = INIT;
+
+   always @(posedge C)
+     begin
+          Q <= D;
+     end
+   
+   
+endmodule
+`timescale 1ns / 1ps
+
+module ofd1s(CK, 
+             D, 
+             Q);
+
+    input CK;
+    input D;
+   output Q;
+   
+   
+   (* HU_SET = "XLXI_1_0" *) 
+   OFD_HXILINX_ofd1s #( .INIT(1'b0) ) XLXI_1 (.C(CK), 
+                             .D(D), 
+                             .Q(Q));
+endmodule

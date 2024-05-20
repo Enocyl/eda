@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="fm_out_video_write_pv2_4_4x4">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2017-4-13T1:54:16</timestamp>
+    <attr value="fm_out_video_write_pv2_4_4x4" name="VeriModel" />
+    <pin polarity="Input" x="0" y="-352" name="fm_cycle_stp_adv" />
+    <pin polarity="Input" x="0" y="-304" name="fm_iv_rd_cycle" />
+    <pin polarity="Input" x="0" y="-256" name="fm_iv_wr_cycle" />
+    <pin polarity="Input" x="0" y="-544" name="r_din(15:0)" />
+    <pin polarity="Input" x="0" y="-496" name="g_din(15:0)" />
+    <pin polarity="Input" x="0" y="-448" name="b_din(15:0)" />
+    <pin polarity="Output" x="512" y="-448" name="fm_ov_wr_cycle" />
+    <pin polarity="Output" x="512" y="-496" name="fm_ov_wr_adrs(18:0)" />
+    <pin polarity="Output" x="512" y="-544" name="fm_ov_wr_d(31:0)" />
+    <pin polarity="Input" x="0" y="-160" name="ovp" />
+    <pin polarity="Input" x="0" y="-208" name="fm_ov_rd_cycle" />
+    <pin polarity="Input" x="0" y="-64" name="clk" />
+    <pin polarity="Input" x="0" y="-112" name="frame_alt" />
+    <graph>
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="256" y="-580" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-352" type="pin fm_cycle_stp_adv" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-304" type="pin fm_iv_rd_cycle" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-256" type="pin fm_iv_wr_cycle" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-544" type="pin r_din(15:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-496" type="pin g_din(15:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-448" type="pin b_din(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-448" type="pin fm_ov_wr_cycle" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-496" type="pin fm_ov_wr_adrs(18:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-544" type="pin fm_ov_wr_d(31:0)" />
+        <line x2="0" y1="-256" y2="-256" x1="64" />
+        <line x2="0" y1="-304" y2="-304" x1="64" />
+        <line x2="0" y1="-352" y2="-352" x1="64" />
+        <line x2="512" y1="-448" y2="-448" x1="448" />
+        <rect width="64" x="448" y="-508" height="24" />
+        <line x2="512" y1="-496" y2="-496" x1="448" />
+        <rect width="64" x="448" y="-556" height="24" />
+        <line x2="512" y1="-544" y2="-544" x1="448" />
+        <rect width="64" x="0" y="-556" height="24" />
+        <line x2="0" y1="-544" y2="-544" x1="64" />
+        <rect width="64" x="0" y="-508" height="24" />
+        <line x2="0" y1="-496" y2="-496" x1="64" />
+        <rect width="64" x="0" y="-460" height="24" />
+        <line x2="0" y1="-448" y2="-448" x1="64" />
+        <rect width="384" x="64" y="-576" height="544" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-160" type="pin ovp" />
+        <line x2="0" y1="-160" y2="-160" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-208" type="pin fm_ov_rd_cycle" />
+        <line x2="0" y1="-208" y2="-208" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-64" type="pin clk" />
+        <line x2="0" y1="-64" y2="-64" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-112" type="pin frame_alt" />
+        <line x2="0" y1="-112" y2="-112" x1="64" />
+    </graph>
+</symbol>

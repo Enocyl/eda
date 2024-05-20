@@ -1,0 +1,396 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : rs232c_xt.vf
+// /___/   /\     Timestamp : 12/09/2021 14:15:21
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: D:\software\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family aspartan6 -verilog ../rs232c_xt.vf -w ../rs232c_xt.sch
+//Design Name: rs232c_xt
+//Device: aspartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module fd1_MUSER_rs232c_xt(CK, 
+                           D, 
+                           Q);
+
+    input CK;
+    input D;
+   output Q;
+   
+   
+   FD #( .INIT(1'b0) ) XLXI_1 (.C(CK), 
+              .D(D), 
+              .Q(Q));
+endmodule
+`timescale 1ns / 1ps
+
+module rs232c_xt(BRIGHTNESS, 
+                 CLK, 
+                 CT_BLUE, 
+                 CT_GREEN, 
+                 CT_RED, 
+                 DSW_LOSS_BRT100, 
+                 EMB_RSP_DATA, 
+                 EMB_RSP_REQ, 
+                 EXE_EN, 
+                 FPGA_VER, 
+                 GAMMA, 
+                 IM_BUSY, 
+                 IM_COPY_CORRECT_BUSY, 
+                 IM_ERR_DET, 
+                 MEM_COLOR_LOSS, 
+                 M4_BANK1, 
+                 M4_ON, 
+                 M5_RSP_DATA, 
+                 M5_RSP_REQ, 
+                 OVPX, 
+                 PANEL_SEL, 
+                 RSP_IM_RD, 
+                 RSP_IM_RD_RSTW, 
+                 RSP_IM_RD_WE, 
+                 RSP_RAM_RD, 
+                 RSP_RAM_RD_RSTW, 
+                 RSP_RAM_RD_WE, 
+                 RXD, 
+                 RX_IM_DOWNLOAD_ON, 
+                 STARTN, 
+                 TEST_PAT, 
+                 CMD_BAUD_RATE, 
+                 CMD_BRIGHTNESS, 
+                 CMD_CT_BLUE, 
+                 CMD_CT_GREEN, 
+                 CMD_CT_RED, 
+                 CMD_GAMMA, 
+                 CMD_M4_BANK1, 
+                 CMD_M4_ON, 
+                 CMD_REBOOT_N, 
+                 CMD_TEST_PAT, 
+                 COEFF_OFFSET_WE, 
+                 COLOR_LOSS, 
+                 EMB_TX_DATA, 
+                 EMB_TX_REQ, 
+                 IM_CMD_AD, 
+                 IM_CMD_RD, 
+                 IM_CMD_RD_RSTW, 
+                 IM_CMD_RD_WE, 
+                 IM_CMD_STARTP, 
+                 IM_DOWNLOAD_EXE_TIM, 
+                 IM_HADRS, 
+                 IM_OPE_SEL, 
+                 IM_VADRS, 
+                 M5_RSP_RAM_RE, 
+                 M5_TX_DATA, 
+                 M5_TX_REQ, 
+                 ONE_IM_TO_RAM_COPY, 
+                 PANEL_CORRECT_IM, 
+                 PANEL_CORRECT_ONE_IM, 
+                 PANEL_CORRECT_STARTP, 
+                 PIXEL_DISP_RGB_ON, 
+                 PIXEL1_DISP_MODE, 
+                 PIXEL1_DISP_ON, 
+                 PIXEL4_DISP_ON, 
+                 RAM_CMD_AD, 
+                 RAM_CMD_RD, 
+                 RAM_CMD_RD_WE, 
+                 RAM_CMD_STARTP, 
+                 RAM_OPE_SEL, 
+                 RGB_OUT_ZERO, 
+                 TESTP_LEVEL, 
+                 TESTP_RGB_EN, 
+                 TP1, 
+                 TP2, 
+                 TP3, 
+                 TXD, 
+                 TX_DONE);
+
+    input [6:0] BRIGHTNESS;
+    input CLK;
+    input [3:0] CT_BLUE;
+    input [3:0] CT_GREEN;
+    input [3:0] CT_RED;
+    input DSW_LOSS_BRT100;
+    input [79:0] EMB_RSP_DATA;
+    input EMB_RSP_REQ;
+    input EXE_EN;
+    input [7:0] FPGA_VER;
+    input [2:0] GAMMA;
+    input IM_BUSY;
+    input IM_COPY_CORRECT_BUSY;
+    input IM_ERR_DET;
+    input [2:0] MEM_COLOR_LOSS;
+    input M4_BANK1;
+    input M4_ON;
+    input [79:0] M5_RSP_DATA;
+    input M5_RSP_REQ;
+    input OVPX;
+    input [3:0] PANEL_SEL;
+    input [7:0] RSP_IM_RD;
+    input RSP_IM_RD_RSTW;
+    input RSP_IM_RD_WE;
+    input [7:0] RSP_RAM_RD;
+    input RSP_RAM_RD_RSTW;
+    input RSP_RAM_RD_WE;
+    input RXD;
+    input RX_IM_DOWNLOAD_ON;
+    input STARTN;
+    input [7:0] TEST_PAT;
+   output [1:0] CMD_BAUD_RATE;
+   output [6:0] CMD_BRIGHTNESS;
+   output [3:0] CMD_CT_BLUE;
+   output [3:0] CMD_CT_GREEN;
+   output [3:0] CMD_CT_RED;
+   output [2:0] CMD_GAMMA;
+   output CMD_M4_BANK1;
+   output CMD_M4_ON;
+   output CMD_REBOOT_N;
+   output [7:0] CMD_TEST_PAT;
+   output COEFF_OFFSET_WE;
+   output [2:0] COLOR_LOSS;
+   output [79:0] EMB_TX_DATA;
+   output EMB_TX_REQ;
+   output [15:0] IM_CMD_AD;
+   output [7:0] IM_CMD_RD;
+   output IM_CMD_RD_RSTW;
+   output IM_CMD_RD_WE;
+   output IM_CMD_STARTP;
+   output IM_DOWNLOAD_EXE_TIM;
+   output [3:0] IM_HADRS;
+   output [3:0] IM_OPE_SEL;
+   output [3:0] IM_VADRS;
+   output M5_RSP_RAM_RE;
+   output [79:0] M5_TX_DATA;
+   output M5_TX_REQ;
+   output ONE_IM_TO_RAM_COPY;
+   output PANEL_CORRECT_IM;
+   output PANEL_CORRECT_ONE_IM;
+   output PANEL_CORRECT_STARTP;
+   output [2:0] PIXEL_DISP_RGB_ON;
+   output [23:0] PIXEL1_DISP_MODE;
+   output PIXEL1_DISP_ON;
+   output PIXEL4_DISP_ON;
+   output [21:0] RAM_CMD_AD;
+   output [7:0] RAM_CMD_RD;
+   output RAM_CMD_RD_WE;
+   output RAM_CMD_STARTP;
+   output [2:0] RAM_OPE_SEL;
+   output [2:0] RGB_OUT_ZERO;
+   output [7:0] TESTP_LEVEL;
+   output [2:0] TESTP_RGB_EN;
+   output TP1;
+   output TP2;
+   output TP3;
+   output TXD;
+   output TX_DONE;
+   
+   wire H;
+   wire L;
+   wire RST;
+   wire [7:0] XLXN_12;
+   wire [6:0] XLXN_14;
+   wire XLXN_18;
+   wire XLXN_80;
+   wire [7:0] XLXN_81;
+   wire XLXN_82;
+   wire XLXN_83;
+   wire XLXN_84;
+   wire XLXN_85;
+   wire [7:0] XLXN_86;
+   wire [7:0] XLXN_87;
+   wire [7:0] XLXN_88;
+   wire [7:0] XLXN_89;
+   wire [7:0] XLXN_90;
+   wire [7:0] XLXN_91;
+   wire [5:0] XLXN_92;
+   wire [7:0] XLXN_93;
+   wire XLXN_94;
+   wire XLXN_95;
+   wire XLXN_96;
+   wire XLXN_98;
+   wire XLXN_99;
+   wire XLXN_132;
+   wire [7:0] XLXN_133;
+   wire XLXN_134;
+   wire XLXN_138;
+   wire XLXN_141;
+   wire XLXN_143;
+   wire [79:0] XLXN_148;
+   wire XLXN_163;
+   wire XLXN_165;
+   wire TX_DONE_DUMMY;
+   wire [1:0] CMD_BAUD_RATE_DUMMY;
+   
+   assign CMD_BAUD_RATE[1:0] = CMD_BAUD_RATE_DUMMY[1:0];
+   assign TX_DONE = TX_DONE_DUMMY;
+   VCC  XLXI_5 (.P(H));
+   GND  XLXI_6 (.G(L));
+   fd1_MUSER_rs232c_xt  XLXI_7 (.CK(CLK), 
+                               .D(STARTN), 
+                               .Q(XLXN_138));
+   OR2  XLXI_8 (.I0(XLXN_138), 
+               .I1(STARTN), 
+               .O(RST));
+   uart_if_impact_a  XLXI_15 (.clk(CLK), 
+                             .cmd_ram_ra(XLXN_14[6:0]), 
+                             .rsp_data(XLXN_148[79:0]), 
+                             .rsp_req(XLXN_18), 
+                             .rst(RST), 
+                             .rx_data(XLXN_81[7:0]), 
+                             .rx_frm_err(XLXN_82), 
+                             .rx_prty_err(XLXN_83), 
+                             .rx_time_out_on(H), 
+                             .rx_vld(XLXN_80), 
+                             .tx_busy(XLXN_99), 
+                             .tx_done(TX_DONE_DUMMY), 
+                             .xl_mode(L), 
+                             .cmd_com_buf_wa(XLXN_133[7:0]), 
+                             .cmd_com_buf_we(XLXN_134), 
+                             .cmd_com_buf_write(XLXN_132), 
+                             .cmd_ram_do(XLXN_93[7:0]), 
+                             .emb_cmd(XLXN_141), 
+                             .emb_cmd_rcv_ok(XLXN_143), 
+                             .emb_tx_data(EMB_TX_DATA[79:0]), 
+                             .emb_tx_req(EMB_TX_REQ), 
+                             .exe_cmd_num(XLXN_92[5:0]), 
+                             .exe_p0(XLXN_91[7:0]), 
+                             .exe_p1(XLXN_90[7:0]), 
+                             .exe_p2(XLXN_89[7:0]), 
+                             .exe_p3(XLXN_88[7:0]), 
+                             .exe_p4(XLXN_87[7:0]), 
+                             .exe_p5(XLXN_86[7:0]), 
+                             .exe_req(XLXN_84), 
+                             .m5_cmd(XLXN_163), 
+                             .m5_cmd_rcv_ok(XLXN_165), 
+                             .m5_rsp_ram_re(M5_RSP_RAM_RE), 
+                             .m5_tx_data(M5_TX_DATA[79:0]), 
+                             .m5_tx_req(M5_TX_REQ), 
+                             .rcv_ok(XLXN_85), 
+                             .rsp_done(XLXN_94), 
+                             .rsp_ram_re(XLXN_95), 
+                             .rx_time_out(), 
+                             .tx_brk(XLXN_96), 
+                             .tx_data(XLXN_12[7:0]), 
+                             .tx_vld(XLXN_98));
+   uart_core_mpc_a  XLXI_16 (.brdsel(CMD_BAUD_RATE_DUMMY[1:0]), 
+                            .clk(CLK), 
+                            .prtysel({L, L}), 
+                            .rst(RST), 
+                            .rxd(RXD), 
+                            .stpsel(L), 
+                            .tx_brk(XLXN_96), 
+                            .tx_data(XLXN_12[7:0]), 
+                            .tx_vld(XLXN_98), 
+                            .rx_brk(), 
+                            .rx_data(XLXN_81[7:0]), 
+                            .rx_frm_err(XLXN_82), 
+                            .rx_prty_err(XLXN_83), 
+                            .rx_vld(XLXN_80), 
+                            .txd(TXD), 
+                            .tx_busy(XLXN_99), 
+                            .tx_done(TX_DONE_DUMMY));
+   cmd_if_pv2_4_4x4  XLXI_23 (.brightness(BRIGHTNESS[6:0]), 
+                             .clk(CLK), 
+                             .cmd_com_buf_wa(XLXN_133[7:0]), 
+                             .cmd_com_buf_we(XLXN_134), 
+                             .cmd_com_buf_write(XLXN_132), 
+                             .cmd_ram_do(XLXN_93[7:0]), 
+                             .ct_blue(CT_BLUE[3:0]), 
+                             .ct_green(CT_GREEN[3:0]), 
+                             .ct_red(CT_RED[3:0]), 
+                             .dsw_loss_brt100(DSW_LOSS_BRT100), 
+                             .emb_cmd(XLXN_141), 
+                             .emb_cmd_rcv_ok(XLXN_143), 
+                             .emb_rsp_data(EMB_RSP_DATA[79:0]), 
+                             .emb_rsp_req(EMB_RSP_REQ), 
+                             .exe_cmd_num(XLXN_92[5:0]), 
+                             .exe_en(EXE_EN), 
+                             .exe_p0(XLXN_91[7:0]), 
+                             .exe_p1(XLXN_90[7:0]), 
+                             .exe_p2(XLXN_89[7:0]), 
+                             .exe_p3(XLXN_88[7:0]), 
+                             .exe_p4(XLXN_87[7:0]), 
+                             .exe_p5(XLXN_86[7:0]), 
+                             .exe_req(XLXN_84), 
+                             .fpga_ver(FPGA_VER[7:0]), 
+                             .gamma(GAMMA[2:0]), 
+                             .im_busy(IM_BUSY), 
+                             .im_copy_correct_busy(IM_COPY_CORRECT_BUSY), 
+                             .im_err_det(IM_ERR_DET), 
+                             .mem_color_loss(MEM_COLOR_LOSS[2:0]), 
+                             .m4_bank1(M4_BANK1), 
+                             .m4_on(M4_ON), 
+                             .m5_cmd(XLXN_163), 
+                             .m5_cmd_rcv_ok(XLXN_165), 
+                             .m5_rsp_data(M5_RSP_DATA[79:0]), 
+                             .m5_rsp_req(M5_RSP_REQ), 
+                             .ovpx(OVPX), 
+                             .panel_sel(PANEL_SEL[3:0]), 
+                             .rcv_ok(XLXN_85), 
+                             .rsp_done(XLXN_94), 
+                             .rsp_im_rd(RSP_IM_RD[7:0]), 
+                             .rsp_im_rd_rstw(RSP_IM_RD_RSTW), 
+                             .rsp_im_rd_we(RSP_IM_RD_WE), 
+                             .rsp_ram_rd(RSP_RAM_RD[7:0]), 
+                             .rsp_ram_rd_rstw(RSP_RAM_RD_RSTW), 
+                             .rsp_ram_rd_we(RSP_RAM_RD_WE), 
+                             .rsp_ram_re(XLXN_95), 
+                             .rst(RST), 
+                             .rx_data(XLXN_81[7:0]), 
+                             .rx_im_download_on(RX_IM_DOWNLOAD_ON), 
+                             .test_pat(TEST_PAT[7:0]), 
+                             .tx_busy(XLXN_99), 
+                             .tx_done(TX_DONE_DUMMY), 
+                             .cmd_baud_rate(CMD_BAUD_RATE_DUMMY[1:0]), 
+                             .cmd_brightness(CMD_BRIGHTNESS[6:0]), 
+                             .cmd_ct_blue(CMD_CT_BLUE[3:0]), 
+                             .cmd_ct_green(CMD_CT_GREEN[3:0]), 
+                             .cmd_ct_red(CMD_CT_RED[3:0]), 
+                             .cmd_gamma(CMD_GAMMA[2:0]), 
+                             .cmd_ram_ra(XLXN_14[6:0]), 
+                             .cmd_reboot_n(CMD_REBOOT_N), 
+                             .coeff_offset_we(COEFF_OFFSET_WE), 
+                             .color_loss(COLOR_LOSS[2:0]), 
+                             .im_cmd_ad(IM_CMD_AD[15:0]), 
+                             .im_cmd_rd(IM_CMD_RD[7:0]), 
+                             .im_cmd_rd_rstw(IM_CMD_RD_RSTW), 
+                             .im_cmd_rd_we(IM_CMD_RD_WE), 
+                             .im_cmd_startp(IM_CMD_STARTP), 
+                             .im_hadrs(IM_HADRS[3:0]), 
+                             .im_ope_sel(IM_OPE_SEL[3:0]), 
+                             .im_vadrs(IM_VADRS[3:0]), 
+                             .one_im_to_ram_copy(ONE_IM_TO_RAM_COPY), 
+                             .panel_correct_im(PANEL_CORRECT_IM), 
+                             .panel_correct_one_im(PANEL_CORRECT_ONE_IM), 
+                             .panel_correct_startp(PANEL_CORRECT_STARTP), 
+                             .pixel_disp_rgb_on(PIXEL_DISP_RGB_ON[2:0]), 
+                             .pixel1_disp_mode(PIXEL1_DISP_MODE[23:0]), 
+                             .pixel1_disp_on(PIXEL1_DISP_ON), 
+                             .pixel4_disp_on(PIXEL4_DISP_ON), 
+                             .ram_cmd_ad(RAM_CMD_AD[21:0]), 
+                             .ram_cmd_rd(RAM_CMD_RD[7:0]), 
+                             .ram_cmd_rd_we(RAM_CMD_RD_WE), 
+                             .ram_cmd_startp(RAM_CMD_STARTP), 
+                             .ram_ope_sel(RAM_OPE_SEL[2:0]), 
+                             .rgb_out_zero(RGB_OUT_ZERO[2:0]), 
+                             .rsp_data(XLXN_148[79:0]), 
+                             .rsp_req(XLXN_18), 
+                             .rx_im_download_exe_tim(IM_DOWNLOAD_EXE_TIM), 
+                             .sel_m4_bank1(CMD_M4_BANK1), 
+                             .sel_m4_on(CMD_M4_ON), 
+                             .sel_test_pat(CMD_TEST_PAT[7:0]), 
+                             .testp_level(TESTP_LEVEL[7:0]), 
+                             .testp_rgb_en(TESTP_RGB_EN[2:0]), 
+                             .tp1(TP1), 
+                             .tp2(TP2), 
+                             .tp3(TP3));
+endmodule
