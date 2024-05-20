@@ -1,0 +1,211 @@
+module clk_gen(C_DONE, 
+               MEM_CLKI, 
+               XCLK_IN, 
+               CLK25M, 
+               CLK31M, 
+               CLK72M, 
+               CLK125M, 
+               MEM_CLKO, 
+               PA_CLK25M, 
+               VP);
+
+    input C_DONE;
+    input MEM_CLKI;
+    input XCLK_IN;
+   output CLK25M;
+   output CLK31M;
+   output CLK72M;
+   output CLK125M;
+   output MEM_CLKO;
+   output PA_CLK25M;
+   output VP;
+   
+   wire CLK20M;
+   wire CLK31MHZ;
+   wire CLK72MHZ;
+   wire CLK125MHZ;
+   wire [7:0] DCM1_ST;
+   wire [7:0] DCM2_ST;
+   wire MEM_CLKOA;
+   wire XLXN_1;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_14;
+   wire XLXN_46;
+   wire XLXN_47;
+   wire XLXN_67;
+   wire XLXN_69;
+   wire XLXN_74;
+   wire XLXN_93;
+   wire XLXN_96;
+   wire XLXN_97;
+   wire XLXN_98;
+   wire XLXN_130;
+   wire XLXN_131;
+   wire XLXN_135;
+   wire XLXN_139;
+   wire XLXN_141;
+   wire XLXN_151;
+   wire XLXN_155;
+   wire XLXN_159;
+   wire XLXN_161;
+   wire XLXN_162;
+   wire XLXN_214;
+   wire CLK125M_DUMMY;
+   wire VP_DUMMY;
+   wire CLK25M_DUMMY;
+   
+   assign CLK25M = CLK25M_DUMMY;
+   assign CLK125M = CLK125M_DUMMY;
+   assign VP = VP_DUMMY;
+   DCM_SP #( .CLKIN_PERIOD(50.0), .CLK_FEEDBACK("NONE"), .CLKFX_MULTIPLY(18), 
+         .CLKFX_DIVIDE(5), .CLKDV_DIVIDE(2.0), .CLKIN_DIVIDE_BY_2("FALSE"), 
+         .CLKOUT_PHASE_SHIFT("NONE"), .DESKEW_ADJUST("SYSTEM_SYNCHRONOUS"), 
+         .DFS_FREQUENCY_MODE("LOW"), .DLL_FREQUENCY_MODE("LOW"), 
+         .DSS_MODE("NONE"), .DUTY_CYCLE_CORRECTION("TRUE"), .PHASE_SHIFT(0), 
+         .STARTUP_WAIT("FALSE"), .FACTORY_JF(16'hC080) ) DCM_SP_CLK72M 
+         (.CLKFB(XLXN_162), 
+                         .CLKIN(CLK20M), 
+                         .DSSEN(XLXN_162), 
+                         .PSCLK(XLXN_162), 
+                         .PSEN(XLXN_162), 
+                         .PSINCDEC(XLXN_162), 
+                         .RST(XLXN_151), 
+                         .CLKDV(), 
+                         .CLKFX(CLK72MHZ), 
+                         .CLKFX180(), 
+                         .CLK0(), 
+                         .CLK2X(), 
+                         .CLK2X180(), 
+                         .CLK90(), 
+                         .CLK180(), 
+                         .CLK270(), 
+                         .LOCKED(XLXN_159), 
+                         .PSDONE(), 
+                         .STATUS(DCM2_ST[7:0]));
+   DCM_SP #( .CLKIN_PERIOD(8.0), .CLK_FEEDBACK("1X"), .CLKDV_DIVIDE(2.0), 
+         .CLKFX_DIVIDE(1), .CLKFX_MULTIPLY(4), .CLKIN_DIVIDE_BY_2("FALSE"), 
+         .CLKOUT_PHASE_SHIFT("NONE"), .DESKEW_ADJUST("SYSTEM_SYNCHRONOUS"), 
+         .DFS_FREQUENCY_MODE("LOW"), .DLL_FREQUENCY_MODE("LOW"), 
+         .DSS_MODE("NONE"), .DUTY_CYCLE_CORRECTION("TRUE"), .PHASE_SHIFT(0), 
+         .STARTUP_WAIT("FALSE"), .FACTORY_JF(16'hC080) ) DCM_SP_MEM_CLK 
+         (.CLKFB(XLXN_93), 
+                          .CLKIN(CLK125M_DUMMY), 
+                          .DSSEN(XLXN_130), 
+                          .PSCLK(XLXN_130), 
+                          .PSEN(XLXN_130), 
+                          .PSINCDEC(XLXN_130), 
+                          .RST(XLXN_131), 
+                          .CLKDV(), 
+                          .CLKFX(), 
+                          .CLKFX180(), 
+                          .CLK0(MEM_CLKOA), 
+                          .CLK2X(), 
+                          .CLK2X180(), 
+                          .CLK90(), 
+                          .CLK180(), 
+                          .CLK270(), 
+                          .LOCKED(XLXN_139), 
+                          .PSDONE(), 
+                          .STATUS(DCM1_ST[7:0]));
+   PLL_BASE #( .REF_JITTER(0.01), .CLKOUT3_DIVIDE(25), .CLKOUT2_DIVIDE(16), 
+         .CLKOUT1_PHASE(90.0), .CLKOUT1_DIVIDE(4), .CLKOUT0_DIVIDE(4), 
+         .CLKIN_PERIOD(40.0), .CLKFBOUT_MULT(20), 
+         .COMPENSATION("SYSTEM_SYNCHRONOUS"), .BANDWIDTH("OPTIMIZED"), 
+         .CLKOUT0_PHASE(0.0), .CLKOUT0_DUTY_CYCLE(0.5), 
+         .CLKOUT1_DUTY_CYCLE(0.5), .CLKOUT2_PHASE(0.0), 
+         .CLKOUT2_DUTY_CYCLE(0.5), .CLKOUT3_PHASE(0.0), 
+         .CLKOUT3_DUTY_CYCLE(0.5), .CLKOUT4_DIVIDE(1), .CLKOUT4_PHASE(0.0), 
+         .CLKOUT4_DUTY_CYCLE(0.5), .CLKOUT5_DIVIDE(1), .CLKOUT5_PHASE(0.0), 
+         .CLKOUT5_DUTY_CYCLE(0.5), .CLKFBOUT_PHASE(0.0), .DIVCLK_DIVIDE(1), 
+         .RESET_ON_LOSS_OF_LOCK("FALSE") ) PLL_CLK125M (.CLKFBIN(XLXN_47), 
+                         .CLKIN(CLK25M_DUMMY), 
+                         .RST(XLXN_46), 
+                         .CLKFBOUT(XLXN_47), 
+                         .CLKOUT0(CLK125MHZ), 
+                         .CLKOUT1(), 
+                         .CLKOUT2(CLK31MHZ), 
+                         .CLKOUT3(CLK20M), 
+                         .CLKOUT4(), 
+                         .CLKOUT5(), 
+                         .LOCKED(XLXN_67));
+   (* IOSTANDARD = "DEFAULT" *) (* IBUF_DELAY_VALUE = "0" *) 
+   IBUFG  XLXI_1 (.I(XCLK_IN), 
+                 .O(XLXN_1));
+   BUFG  XLXI_2 (.I(XLXN_1), 
+                .O(CLK25M_DUMMY));
+   ODDR2 #( .INIT(1'b0), .SRTYPE("SYNC"), .DDR_ALIGNMENT("NONE") ) XLXI_5 
+         (.CE(XLXN_8), 
+                 .C0(CLK25M_DUMMY), 
+                 .C1(XLXN_14), 
+                 .D0(XLXN_8), 
+                 .D1(XLXN_7), 
+                 .R(XLXN_7), 
+                 .S(XLXN_7), 
+                 .Q(PA_CLK25M));
+   GND  XLXI_6 (.G(XLXN_7));
+   VCC  XLXI_7 (.P(XLXN_8));
+   INV  XLXI_11 (.I(CLK25M_DUMMY), 
+                .O(XLXN_14));
+   OR2B1  XLXI_39 (.I0(C_DONE), 
+                  .I1(XLXN_74), 
+                  .O(XLXN_46));
+   dcm_rst_mpc  XLXI_44 (.clk(CLK25M_DUMMY), 
+                        .clkin_stop(XLXN_69), 
+                        .c_done(C_DONE), 
+                        .f59hz(XLXN_69), 
+                        .locked(XLXN_67), 
+                        .ovp(VP_DUMMY), 
+                        .dcm_rst(XLXN_74));
+   BUFG  XLXI_45 (.I(CLK125MHZ), 
+                 .O(CLK125M_DUMMY));
+   BUFG  XLXI_47 (.I(CLK31MHZ), 
+                 .O(CLK31M));
+   GND  XLXI_49 (.G(XLXN_69));
+   (* IOSTANDARD = "DEFAULT" *) (* IBUF_DELAY_VALUE = "0" *) 
+   IBUFG  XLXI_52 (.I(MEM_CLKI), 
+                  .O(XLXN_93));
+   ODDR2 #( .INIT(1'b0), .SRTYPE("SYNC"), .DDR_ALIGNMENT("NONE") ) XLXI_53 
+         (.CE(XLXN_97), 
+                  .C0(MEM_CLKOA), 
+                  .C1(XLXN_98), 
+                  .D0(XLXN_97), 
+                  .D1(XLXN_96), 
+                  .R(XLXN_96), 
+                  .S(XLXN_96), 
+                  .Q(MEM_CLKO));
+   INV  XLXI_54 (.I(MEM_CLKOA), 
+                .O(XLXN_98));
+   GND  XLXI_55 (.G(XLXN_96));
+   VCC  XLXI_56 (.P(XLXN_97));
+   GND  XLXI_75 (.G(XLXN_130));
+   OR2B1  XLXI_76 (.I0(C_DONE), 
+                  .I1(XLXN_141), 
+                  .O(XLXN_131));
+   dcm_rst_mpc  XLXI_77 (.clk(CLK25M_DUMMY), 
+                        .clkin_stop(DCM1_ST[1]), 
+                        .c_done(C_DONE), 
+                        .f59hz(XLXN_135), 
+                        .locked(XLXN_139), 
+                        .ovp(VP_DUMMY), 
+                        .dcm_rst(XLXN_141));
+   GND  XLXI_78 (.G(XLXN_135));
+   GND  XLXI_85 (.G(XLXN_162));
+   OR2B1  XLXI_86 (.I0(C_DONE), 
+                  .I1(XLXN_161), 
+                  .O(XLXN_151));
+   dcm_rst_mpc  XLXI_87 (.clk(CLK25M_DUMMY), 
+                        .clkin_stop(DCM2_ST[1]), 
+                        .c_done(C_DONE), 
+                        .f59hz(XLXN_155), 
+                        .locked(XLXN_159), 
+                        .ovp(VP_DUMMY), 
+                        .dcm_rst(XLXN_161));
+   GND  XLXI_88 (.G(XLXN_155));
+   BUFG  XLXI_89 (.I(CLK72MHZ), 
+                 .O(CLK72M));
+   int_ovp_gen  XLXI_109 (.clk(CLK25M_DUMMY), 
+                         .f50hz(XLXN_214), 
+                         .vp(VP_DUMMY));
+   GND  XLXI_110 (.G(XLXN_214));
+endmodule
