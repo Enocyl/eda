@@ -1,0 +1,144 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : rgmii_tx.vf
+// /___/   /\     Timestamp : 01/21/2022 13:58:39
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: D:\software\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family aspartan6 -verilog ../dk_start/sch/rgmii_tx.vf -w ../dk_start/sch/rgmii_tx.sch
+//Design Name: rgmii_tx
+//Device: aspartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module rgmii_tx(CLK, 
+                CLK_OE, 
+                TXC_CLK, 
+                TXD_IN, 
+                TX_EN, 
+                TX_ER, 
+                TXC, 
+                TXD, 
+                TX_CTL);
+
+    input CLK;
+    input CLK_OE;
+    input TXC_CLK;
+    input [7:0] TXD_IN;
+    input TX_EN;
+    input TX_ER;
+   output TXC;
+   output [3:0] TXD;
+   output TX_CTL;
+   
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_6;
+   wire XLXN_10;
+   wire XLXN_11;
+   wire XLXN_12;
+   wire XLXN_22;
+   wire XLXN_24;
+   wire XLXN_25;
+   wire XLXN_29;
+   wire XLXN_31;
+   wire XLXN_32;
+   wire XLXN_36;
+   wire XLXN_38;
+   wire XLXN_39;
+   wire XLXN_196;
+   wire XLXN_198;
+   wire XLXN_199;
+   wire XLXN_208;
+   
+   GND  XLXI_2 (.G(XLXN_3));
+   VCC  XLXI_3 (.P(XLXN_4));
+   INV  XLXI_4 (.I(TXC_CLK), 
+               .O(XLXN_6));
+   GND  XLXI_6 (.G(XLXN_10));
+   VCC  XLXI_7 (.P(XLXN_11));
+   INV  XLXI_8 (.I(CLK), 
+               .O(XLXN_12));
+   GND  XLXI_14 (.G(XLXN_25));
+   VCC  XLXI_15 (.P(XLXN_24));
+   INV  XLXI_16 (.I(CLK), 
+                .O(XLXN_22));
+   GND  XLXI_18 (.G(XLXN_32));
+   VCC  XLXI_19 (.P(XLXN_31));
+   INV  XLXI_20 (.I(CLK), 
+                .O(XLXN_29));
+   GND  XLXI_22 (.G(XLXN_39));
+   VCC  XLXI_23 (.P(XLXN_38));
+   INV  XLXI_24 (.I(CLK), 
+                .O(XLXN_36));
+   GND  XLXI_118 (.G(XLXN_199));
+   VCC  XLXI_119 (.P(XLXN_198));
+   INV  XLXI_120 (.I(CLK), 
+                 .O(XLXN_196));
+   XOR2  XLXI_121 (.I0(TX_ER), 
+                  .I1(TX_EN), 
+                  .O(XLXN_208));
+   ODDR2 #( .DDR_ALIGNMENT("C0"), .SRTYPE("ASYNC"), .INIT(1'b0) ) XLXI_122 
+         (.CE(XLXN_4), 
+                   .C0(TXC_CLK), 
+                   .C1(XLXN_6), 
+                   .D0(CLK_OE), 
+                   .D1(XLXN_3), 
+                   .R(XLXN_3), 
+                   .S(XLXN_3), 
+                   .Q(TXC));
+   ODDR2 #( .DDR_ALIGNMENT("C0"), .SRTYPE("ASYNC"), .INIT(1'b0) ) XLXI_127 
+         (.CE(XLXN_11), 
+                   .C0(CLK), 
+                   .C1(XLXN_12), 
+                   .D0(TXD_IN[0]), 
+                   .D1(TXD_IN[4]), 
+                   .R(XLXN_10), 
+                   .S(XLXN_10), 
+                   .Q(TXD[0]));
+   ODDR2 #( .DDR_ALIGNMENT("C0"), .SRTYPE("ASYNC"), .INIT(1'b0) ) XLXI_128 
+         (.CE(XLXN_24), 
+                   .C0(CLK), 
+                   .C1(XLXN_22), 
+                   .D0(TXD_IN[1]), 
+                   .D1(TXD_IN[5]), 
+                   .R(XLXN_25), 
+                   .S(XLXN_25), 
+                   .Q(TXD[1]));
+   ODDR2 #( .DDR_ALIGNMENT("C0"), .SRTYPE("ASYNC"), .INIT(1'b0) ) XLXI_129 
+         (.CE(XLXN_31), 
+                   .C0(CLK), 
+                   .C1(XLXN_29), 
+                   .D0(TXD_IN[2]), 
+                   .D1(TXD_IN[6]), 
+                   .R(XLXN_32), 
+                   .S(XLXN_32), 
+                   .Q(TXD[2]));
+   ODDR2 #( .DDR_ALIGNMENT("C0"), .SRTYPE("ASYNC"), .INIT(1'b0) ) XLXI_130 
+         (.CE(XLXN_38), 
+                   .C0(CLK), 
+                   .C1(XLXN_36), 
+                   .D0(TXD_IN[3]), 
+                   .D1(TXD_IN[7]), 
+                   .R(XLXN_39), 
+                   .S(XLXN_39), 
+                   .Q(TXD[3]));
+   ODDR2 #( .DDR_ALIGNMENT("C0"), .SRTYPE("ASYNC"), .INIT(1'b0) ) XLXI_131 
+         (.CE(XLXN_198), 
+                   .C0(CLK), 
+                   .C1(XLXN_196), 
+                   .D0(TX_EN), 
+                   .D1(XLXN_208), 
+                   .R(XLXN_199), 
+                   .S(XLXN_199), 
+                   .Q(TX_CTL));
+endmodule
