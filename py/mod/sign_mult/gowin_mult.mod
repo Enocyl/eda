@@ -1,0 +1,24 @@
+-series GW2A
+-device GW2A-55
+-package UBGA324D
+-part_number GW2A-LV55UG324DC7/I6
+
+
+-mod_name Gowin_MULT
+-file_name gowin_mult
+-path E:/proj_Enoch/leaps_local/prj_ll/hdl_ll/gowin/nightly/mini_rcv/dual/Mini_Rcv_CPNdual_20220718/src/gowin_mult/
+-type MULT
+-file_type vlg
+-source_a parallel
+-source_b parallel
+-width_a 18
+-width_b 18
+-data_type_a signed
+-data_type_b signed
+-en_shiftout_a false
+-en_shiftout_b false
+-reset_mode sync
+-ina_reg bypass
+-inb_reg bypass
+-pipe_reg registered
+-out_reg bypass

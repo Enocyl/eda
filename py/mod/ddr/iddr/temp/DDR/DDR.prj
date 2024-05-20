@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW2A-55" package="UBGA324D" speed="7" partNumber="GW2A-LV55UG324DC7/I6"/>
+    <FileList>
+        <File path="D:/Gowin/Gowin_V1.9.8.05/IDE/ipcore/DDR/data/ddr.v" type="verilog"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="1"/>
+        <Option type="dsp_balance" value="1"/>
+        <Option type="include_path" value="D:/Gowin/Gowin_V1.9.8.05/IDE/ipcore/DDR/data"/>
+        <Option type="include_path" value="E:/mlfield/xex/py/mod/ddr/iddr/temp/DDR"/>
+        <Option type="output_file" value="iddr2.vg"/>
+        <Option type="output_template" value="iddr2_tmp.v"/>
+        <Option type="ram_balance" value="1"/>
+        <Option type="ram_rw_check" value="1"/>
+        <Option type="verilog_language" value="sysv-2017"/>
+    </OptionList>
+</Project>

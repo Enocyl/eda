@@ -1,0 +1,12 @@
+[General]
+ipc_version=4
+file=dram_sdp
+module=dram_sdp
+target_device=gw2a55-019
+type=ssram_ram16sdp
+version=1.0
+
+[Config]
+DEPTH=2
+LANG=0
+WIDTH=1

@@ -1,0 +1,15 @@
+-series GW2A
+-device GW2A-55
+-package UBGA324D
+-part_number GW2A-LV55UG324DC7/I6
+-mod_name gamma10_rom_mpc
+-file_name gamma10_rom_mpc
+-path e:/proj_Enoch/leaps_local/prj_ll/hdl_ll/gowin/nightly/mini_rcv/dual/Mini_Rcv_CPNdual_20220718/ip/gamma10_rom_mpc/
+-type RAM_ROM
+-file_type vlg
+-pROM true
+-depth 1024
+-width 16
+-read_mode bypass
+-reset_mode sync
+-init_file e:/proj_Enoch/leaps_local/prj_ll/hdl_ll/gowin/nightly/mini_rcv/dual/Mini_Rcv_CPNdual_20220718/ip/gamma10_rom_mpc/gamma10_rom_mpc.mi

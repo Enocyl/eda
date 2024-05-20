@@ -1,0 +1,16 @@
+-series GW2A
+-device GW2A-55
+-package UG324D
+-part_number GW2A-LV55UG324DC7/I6
+-mod_name ram_a8w24
+-file_name ram_a8w24
+-path E:/mlfield/xex/py/mod/bram/
+-type RAM_SDP
+-file_type vlg
+-bram_b true
+-depth_1 384
+-width_1 16
+-depth_0 768
+-width_0 8
+-read_mode bypass
+-reset_mode sync

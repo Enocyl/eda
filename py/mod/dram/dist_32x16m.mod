@@ -1,0 +1,12 @@
+-series GW2A
+-device GW2A-55
+-package UBGA324D
+-part_number GW2A-LV55UG324DC7/I6
+-dev_type GW2A-55
+-mod_name dist_32x16m
+-file_name dist_32x16m
+-path e:/proj_Enoch/leaps_local/prj_ll/hdl_ll/gowin/nightly/mini_rcv/dual/Mini_Rcv_CPNdual_20220718/ip/dist_32x16m/
+-type SSRAM_SDP
+-file_type vlg
+-ssram_depth 16
+-ssram_width 32

@@ -1,0 +1,24 @@
+-series GW2A
+-device GW2A-18C
+-package PBGA256
+-part_number GW2A-LV18PG256A6
+
+
+-mod_name signed_mult_18x18
+-file_name signed_mult_18x18
+-path E:/proj_Enoch/Hasco/hdl/prj4Hasco/gaowin/hasco_lcar_144X256P_ru_elite_20211213/fpga_project/src/ip/signed_mult_18x18/
+-type MULT
+-file_type vlg
+-source_a parallel
+-source_b parallel
+-width_a 18
+-width_b 18
+-data_type_a signed
+-data_type_b signed
+-en_shiftout_a false
+-en_shiftout_b false
+-reset_mode async
+-ina_reg registered
+-inb_reg registered
+-pipe_reg bypass
+-out_reg registered
